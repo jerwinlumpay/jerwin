@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<!DOCTYPE html><html lang="en"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jerwin Lumpay - Portfolio</title>
@@ -35,9 +33,22 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-    </style>
-</head>
-<body class="overflow-x-hidden antialiased">
+
+        @keyframes marquee {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .animate-marquee {
+            display: flex;
+            width: max-content;
+            animation: marquee 35s linear infinite;
+        }
+
+        .animate-marquee:hover {
+            animation-play-state: paused;
+        }
+    </style></head><body class="overflow-x-hidden antialiased">
 
     <nav class="fixed top-0 left-0 right-0 z-50 bg-[#0f172a]/80 backdrop-blur-md border-b border-slate-800">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
@@ -47,6 +58,7 @@
                 <a href="#competencies" class="hover:text-indigo-400 transition">Competencies</a>
                 <a href="#experience" class="hover:text-indigo-400 transition">Experience</a>
                 <a href="#education" class="hover:text-indigo-400 transition">Education</a>
+                <a href="#credentials-gallery" class="hover:text-indigo-400 transition">Certificates</a>
             </div>
             <a href="mailto:jerwinlumpay@outlook.com" class="px-5 py-2.5 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 text-sm font-semibold hover:opacity-90 transition shadow-lg shadow-indigo-500/20">Contact Me</a>
         </div>
@@ -341,9 +353,240 @@
         </div>
     </section>
 
+    <section id="credentials-gallery" class="py-24 bg-[#070a13] border-t border-slate-900 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 mb-12 text-center space-y-4">
+            <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">Verified <span class="gradient-text">Qualifications Gallery</span></h2>
+            <p class="text-slate-400 max-w-2xl mx-auto text-sm">Continuous training frameworks mapping direct industry competencies. Hover to pause streaming line view.</p>
+        </div>
+
+        <div class="relative w-full flex items-center mask-gradient">
+            <div class="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-[#070a13] to-transparent z-10 pointer-events-none"></div>
+            <div class="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-[#070a13] to-transparent z-10 pointer-events-none"></div>
+            
+            <div class="animate-marquee flex gap-6 py-4">
+                <div class="glow-card p-5 rounded-xl w-[320px] flex flex-col justify-between space-y-4 shrink-0">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-lg bg-indigo-500/10 flex items-center justify-center text-indigo-400"><i class="fa-solid fa-file-invoice"></i></div>
+                        <div>
+                            <h4 class="text-white font-bold text-sm leading-tight line-clamp-2">Administrative Professional Foundations</h4>
+                            <p class="text-slate-500 text-xs mt-0.5">LinkedIn Learning</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between text-[11px] pt-1 border-t border-slate-800/60"><span class="text-indigo-400/90 font-medium"><i class="fa-regular fa-id-badge mr-1"></i> Verified Skill</span><span class="bg-indigo-500/10 text-indigo-400 px-2 py-0.5 rounded text-[10px] font-semibold uppercase">Admin</span></div>
+                </div>
+
+                <div class="glow-card p-5 rounded-xl w-[320px] flex flex-col justify-between space-y-4 shrink-0">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-lg bg-purple-500/10 flex items-center justify-center text-purple-400"><i class="fa-solid fa-briefcase"></i></div>
+                        <div>
+                            <h4 class="text-white font-bold text-sm leading-tight line-clamp-2">Career Essentials in Administrative Assistance</h4>
+                            <p class="text-slate-500 text-xs mt-0.5">Microsoft & LinkedIn</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between text-[11px] pt-1 border-t border-slate-800/60"><span class="text-purple-400/90 font-medium"><i class="fa-regular fa-id-badge mr-1"></i> Verified Skill</span><span class="bg-purple-500/10 text-purple-400 px-2 py-0.5 rounded text-[10px] font-semibold uppercase">Core</span></div>
+                </div>
+
+                <div class="glow-card p-5 rounded-xl w-[320px] flex flex-col justify-between space-y-4 shrink-0">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-lg bg-pink-500/10 flex items-center justify-center text-pink-400"><i class="fa-solid fa-laptop-code"></i></div>
+                        <div>
+                            <h4 class="text-white font-bold text-sm leading-tight line-clamp-2">Collaborating with Microsoft 365</h4>
+                            <p class="text-slate-500 text-xs mt-0.5">LinkedIn Learning</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between text-[11px] pt-1 border-t border-slate-800/60"><span class="text-pink-400/90 font-medium"><i class="fa-regular fa-id-badge mr-1"></i> Verified Skill</span><span class="bg-pink-500/10 text-pink-400 px-2 py-0.5 rounded text-[10px] font-semibold uppercase">M365</span></div>
+                </div>
+
+                <div class="glow-card p-5 rounded-xl w-[320px] flex flex-col justify-between space-y-4 shrink-0">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-lg bg-emerald-500/10 flex items-center justify-center text-emerald-400"><i class="fa-solid fa-comments text-lg"></i></div>
+                        <div>
+                            <h4 class="text-white font-bold text-sm leading-tight line-clamp-2">Communication Foundations</h4>
+                            <p class="text-slate-500 text-xs mt-0.5">LinkedIn Learning</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between text-[11px] pt-1 border-t border-slate-800/60"><span class="text-emerald-400/90 font-medium"><i class="fa-regular fa-id-badge mr-1"></i> Verified Skill</span><span class="bg-emerald-500/10 text-emerald-400 px-2 py-0.5 rounded text-[10px] font-semibold uppercase">Soft Skills</span></div>
+                </div>
+
+                <div class="glow-card p-5 rounded-xl w-[320px] flex flex-col justify-between space-y-4 shrink-0">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-400"><i class="fa-solid fa-address-book"></i></div>
+                        <div>
+                            <h4 class="text-white font-bold text-sm leading-tight line-clamp-2">Customer Relationship Management (CRM)</h4>
+                            <p class="text-slate-500 text-xs mt-0.5">Great Learning</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between text-[11px] pt-1 border-t border-slate-800/60"><span class="text-blue-400/90 font-medium"><i class="fa-regular fa-id-badge mr-1"></i> Verified Skill</span><span class="bg-blue-500/10 text-blue-400 px-2 py-0.5 rounded text-[10px] font-semibold uppercase">CRM</span></div>
+                </div>
+
+                <div class="glow-card p-5 rounded-xl w-[320px] flex flex-col justify-between space-y-4 shrink-0">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-lg bg-indigo-500/10 flex items-center justify-center text-indigo-400"><i class="fa-solid fa-users-gear"></i></div>
+                        <div>
+                            <h4 class="text-white font-bold text-sm leading-tight line-clamp-2">Customer Management</h4>
+                            <p class="text-slate-500 text-xs mt-0.5">Great Learning</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between text-[11px] pt-1 border-t border-slate-800/60"><span class="text-indigo-400/90 font-medium"><i class="fa-regular fa-id-badge mr-1"></i> Verified Skill</span><span class="bg-indigo-500/10 text-indigo-400 px-2 py-0.5 rounded text-[10px] font-semibold uppercase">CX Ops</span></div>
+                </div>
+
+                <div class="glow-card p-5 rounded-xl w-[320px] flex flex-col justify-between space-y-4 shrink-0">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-lg bg-purple-500/10 flex items-center justify-center text-purple-400"><i class="fa-solid fa-id-card-clip"></i></div>
+                        <div>
+                            <h4 class="text-white font-bold text-sm leading-tight line-clamp-2">Human Resource Management</h4>
+                            <p class="text-slate-500 text-xs mt-0.5">Great Learning</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between text-[11px] pt-1 border-t border-slate-800/60"><span class="text-purple-400/90 font-medium"><i class="fa-regular fa-id-badge mr-1"></i> Verified Skill</span><span class="bg-purple-500/10 text-purple-400 px-2 py-0.5 rounded text-[10px] font-semibold uppercase">HRM</span></div>
+                </div>
+
+                <div class="glow-card p-5 rounded-xl w-[320px] flex flex-col justify-between space-y-4 shrink-0">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-lg bg-pink-500/10 flex items-center justify-center text-pink-400"><i class="fa-solid fa-clipboard-check"></i></div>
+                        <div>
+                            <h4 class="text-white font-bold text-sm leading-tight line-clamp-2">ISO 9001 Quality Management System</h4>
+                            <p class="text-slate-500 text-xs mt-0.5">Great Learning</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between text-[11px] pt-1 border-t border-slate-800/60"><span class="text-pink-400/90 font-medium"><i class="fa-regular fa-id-badge mr-1"></i> Verified Skill</span><span class="bg-pink-500/10 text-pink-400 px-2 py-0.5 rounded text-[10px] font-semibold uppercase">Quality</span></div>
+                </div>
+
+                <div class="glow-card p-5 rounded-xl w-[320px] flex flex-col justify-between space-y-4 shrink-0">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-lg bg-emerald-500/10 flex items-center justify-center text-emerald-400"><i class="fa-solid fa-truck-fast"></i></div>
+                        <div>
+                            <h4 class="text-white font-bold text-sm leading-tight line-clamp-2">Logistics Management Frameworks</h4>
+                            <p class="text-slate-500 text-xs mt-0.5">Great Learning</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between text-[11px] pt-1 border-t border-slate-800/60"><span class="text-emerald-400/90 font-medium"><i class="fa-regular fa-id-badge mr-1"></i> Verified Skill</span><span class="bg-emerald-500/10 text-emerald-400 px-2 py-0.5 rounded text-[10px] font-semibold uppercase">Logistics</span></div>
+                </div>
+
+                <div class="glow-card p-5 rounded-xl w-[320px] flex flex-col justify-between space-y-4 shrink-0">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-400"><i class="fa-solid fa-layer-group"></i></div>
+                        <div>
+                            <h4 class="text-white font-bold text-sm leading-tight line-clamp-2">Managing Multiple Projects Ecosystems</h4>
+                            <p class="text-slate-500 text-xs mt-0.5">Great Learning</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between text-[11px] pt-1 border-t border-slate-800/60"><span class="text-blue-400/90 font-medium"><i class="fa-regular fa-id-badge mr-1"></i> Verified Skill</span><span class="bg-blue-500/10 text-blue-400 px-2 py-0.5 rounded text-[10px] font-semibold uppercase">PM</span></div>
+                </div>
+
+                <div class="glow-card p-5 rounded-xl w-[320px] flex flex-col justify-between space-y-4 shrink-0">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-lg bg-indigo-500/10 flex items-center justify-center text-indigo-400"><i class="fa-solid fa-file-invoice"></i></div>
+                        <div>
+                            <h4 class="text-white font-bold text-sm leading-tight line-clamp-2">Administrative Professional Foundations</h4>
+                            <p class="text-slate-500 text-xs mt-0.5">LinkedIn Learning</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between text-[11px] pt-1 border-t border-slate-800/60"><span class="text-indigo-400/90 font-medium"><i class="fa-regular fa-id-badge mr-1"></i> Verified Skill</span><span class="bg-indigo-500/10 text-indigo-400 px-2 py-0.5 rounded text-[10px] font-semibold uppercase">Admin</span></div>
+                </div>
+
+                <div class="glow-card p-5 rounded-xl w-[320px] flex flex-col justify-between space-y-4 shrink-0">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-lg bg-purple-500/10 flex items-center justify-center text-purple-400"><i class="fa-solid fa-briefcase"></i></div>
+                        <div>
+                            <h4 class="text-white font-bold text-sm leading-tight line-clamp-2">Career Essentials in Administrative Assistance</h4>
+                            <p class="text-slate-500 text-xs mt-0.5">Microsoft & LinkedIn</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between text-[11px] pt-1 border-t border-slate-800/60"><span class="text-purple-400/90 font-medium"><i class="fa-regular fa-id-badge mr-1"></i> Verified Skill</span><span class="bg-purple-500/10 text-purple-400 px-2 py-0.5 rounded text-[10px] font-semibold uppercase">Core</span></div>
+                </div>
+
+                <div class="glow-card p-5 rounded-xl w-[320px] flex flex-col justify-between space-y-4 shrink-0">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-lg bg-pink-500/10 flex items-center justify-center text-pink-400"><i class="fa-solid fa-laptop-code"></i></div>
+                        <div>
+                            <h4 class="text-white font-bold text-sm leading-tight line-clamp-2">Collaborating with Microsoft 365</h4>
+                            <p class="text-slate-500 text-xs mt-0.5">LinkedIn Learning</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between text-[11px] pt-1 border-t border-slate-800/60"><span class="text-pink-400/90 font-medium"><i class="fa-regular fa-id-badge mr-1"></i> Verified Skill</span><span class="bg-pink-500/10 text-pink-400 px-2 py-0.5 rounded text-[10px] font-semibold uppercase">M365</span></div>
+                </div>
+
+                <div class="glow-card p-5 rounded-xl w-[320px] flex flex-col justify-between space-y-4 shrink-0">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-lg bg-emerald-500/10 flex items-center justify-center text-emerald-400"><i class="fa-solid fa-comments text-lg"></i></div>
+                        <div>
+                            <h4 class="text-white font-bold text-sm leading-tight line-clamp-2">Communication Foundations</h4>
+                            <p class="text-slate-500 text-xs mt-0.5">LinkedIn Learning</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between text-[11px] pt-1 border-t border-slate-800/60"><span class="text-emerald-400/90 font-medium"><i class="fa-regular fa-id-badge mr-1"></i> Verified Skill</span><span class="bg-emerald-500/10 text-emerald-400 px-2 py-0.5 rounded text-[10px] font-semibold uppercase">Soft Skills</span></div>
+                </div>
+
+                <div class="glow-card p-5 rounded-xl w-[320px] flex flex-col justify-between space-y-4 shrink-0">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-400"><i class="fa-solid fa-address-book"></i></div>
+                        <div>
+                            <h4 class="text-white font-bold text-sm leading-tight line-clamp-2">Customer Relationship Management (CRM)</h4>
+                            <p class="text-slate-500 text-xs mt-0.5">Great Learning</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between text-[11px] pt-1 border-t border-slate-800/60"><span class="text-blue-400/90 font-medium"><i class="fa-regular fa-id-badge mr-1"></i> Verified Skill</span><span class="bg-blue-500/10 text-blue-400 px-2 py-0.5 rounded text-[10px] font-semibold uppercase">CRM</span></div>
+                </div>
+
+                <div class="glow-card p-5 rounded-xl w-[320px] flex flex-col justify-between space-y-4 shrink-0">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-lg bg-indigo-500/10 flex items-center justify-center text-indigo-400"><i class="fa-solid fa-users-gear"></i></div>
+                        <div>
+                            <h4 class="text-white font-bold text-sm leading-tight line-clamp-2">Customer Management</h4>
+                            <p class="text-slate-500 text-xs mt-0.5">Great Learning</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between text-[11px] pt-1 border-t border-slate-800/60"><span class="text-indigo-400/90 font-medium"><i class="fa-regular fa-id-badge mr-1"></i> Verified Skill</span><span class="bg-indigo-500/10 text-indigo-400 px-2 py-0.5 rounded text-[10px] font-semibold uppercase">CX Ops</span></div>
+                </div>
+
+                <div class="glow-card p-5 rounded-xl w-[320px] flex flex-col justify-between space-y-4 shrink-0">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-lg bg-purple-500/10 flex items-center justify-center text-purple-400"><i class="fa-solid fa-id-card-clip"></i></div>
+                        <div>
+                            <h4 class="text-white font-bold text-sm leading-tight line-clamp-2">Human Resource Management</h4>
+                            <p class="text-slate-500 text-xs mt-0.5">Great Learning</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between text-[11px] pt-1 border-t border-slate-800/60"><span class="text-purple-400/90 font-medium"><i class="fa-regular fa-id-badge mr-1"></i> Verified Skill</span><span class="bg-purple-500/10 text-purple-400 px-2 py-0.5 rounded text-[10px] font-semibold uppercase">HRM</span></div>
+                </div>
+
+                <div class="glow-card p-5 rounded-xl w-[320px] flex flex-col justify-between space-y-4 shrink-0">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-lg bg-pink-500/10 flex items-center justify-center text-pink-400"><i class="fa-solid fa-clipboard-check"></i></div>
+                        <div>
+                            <h4 class="text-white font-bold text-sm leading-tight line-clamp-2">ISO 9001 Quality Management System</h4>
+                            <p class="text-slate-500 text-xs mt-0.5">Great Learning</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between text-[11px] pt-1 border-t border-slate-800/60"><span class="text-pink-400/90 font-medium"><i class="fa-regular fa-id-badge mr-1"></i> Verified Skill</span><span class="bg-pink-500/10 text-pink-400 px-2 py-0.5 rounded text-[10px] font-semibold uppercase">Quality</span></div>
+                </div>
+
+                <div class="glow-card p-5 rounded-xl w-[320px] flex flex-col justify-between space-y-4 shrink-0">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-lg bg-emerald-500/10 flex items-center justify-center text-emerald-400"><i class="fa-solid fa-truck-fast"></i></div>
+                        <div>
+                            <h4 class="text-white font-bold text-sm leading-tight line-clamp-2">Logistics Management Frameworks</h4>
+                            <p class="text-slate-500 text-xs mt-0.5">Great Learning</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between text-[11px] pt-1 border-t border-slate-800/60"><span class="text-emerald-400/90 font-medium"><i class="fa-regular fa-id-badge mr-1"></i> Verified Skill</span><span class="bg-emerald-500/10 text-emerald-400 px-2 py-0.5 rounded text-[10px] font-semibold uppercase">Logistics</span></div>
+                </div>
+
+                <div class="glow-card p-5 rounded-xl w-[320px] flex flex-col justify-between space-y-4 shrink-0">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-400"><i class="fa-solid fa-layer-group"></i></div>
+                        <div>
+                            <h4 class="text-white font-bold text-sm leading-tight line-clamp-2">Managing Multiple Projects Ecosystems</h4>
+                            <p class="text-slate-500 text-xs mt-0.5">Great Learning</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between text-[11px] pt-1 border-t border-slate-800/60"><span class="text-blue-400/90 font-medium"><i class="fa-regular fa-id-badge mr-1"></i> Verified Skill</span><span class="bg-blue-500/10 text-blue-400 px-2 py-0.5 rounded text-[10px] font-semibold uppercase">PM</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer class="border-t border-slate-900 py-8 bg-[#0f172a] text-center text-xs text-slate-500">
         <p>&copy; 2026 Jerwin Lumpay. All Rights Reserved. Prepared for immediate operational deployment in Dubai, UAE.</p>
-    </footer>
-
-</body>
-</html>
+    </footer></body></html>
