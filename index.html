@@ -15,69 +15,87 @@
       color: #1A1A1A; 
     }
     .khaki-nav { 
-      background: rgba(244, 240, 230, 0.9); 
+      background: rgba(244, 240, 230, 0.95); 
       backdrop-filter: blur(14px); 
-      border-b: 1px solid #E6DCC8; 
     }
     .khaki-card { 
       background: #F4F0E6; 
       border: 1px solid #D4CAB4; 
     }
     html { scroll-behavior: smooth; }
+
+    /* Highlight Glow Effect for Active Page Links */
+    .nav-active {
+      color: #78350f !important; /* text-amber-900 */
+      background-color: #E6DCC8 !important;
+      border-right: 4px solid #78350f;
+      box-shadow: 0 0 15px rgba(120, 53, 15, 0.15);
+      font-weight: 800;
+    }
   </style>
 </head>
-<body class="selection:bg-[#E6DCC8] selection:text-black pt-16">
+<body class="selection:bg-[#E6DCC8] selection:text-black lg:pl-64">
 
-  <!-- ==================== NAVIGATION BAR ==================== -->
-  <nav class="fixed top-0 left-0 w-full z-50 khaki-nav border-b border-[#E6DCC8]">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16">
-        <div class="flex-shrink-0">
-          <span class="text-base sm:text-lg font-extrabold tracking-wider text-black uppercase">
-            JOBS BY <span class="text-amber-900">JERWIN LUMPAY</span>
-          </span>
-        </div>
-        
-        <!-- DESKTOP MENU -->
-        <div class="hidden lg:flex items-center space-x-1 font-semibold text-sm text-gray-800">
-          <a href="#home" class="hover:text-black px-3 py-2 transition">Home</a>
-          <a href="#uae-jobs" class="hover:text-black px-3 py-2 transition">UAE Jobs</a>
-          <a href="#ph-jobs" class="hover:text-black px-3 py-2 transition">PH Jobs</a>
-          <a href="#cv-review" class="hover:text-black px-3 py-2 transition">Free CV Review</a>
-          <a href="#cv-services" class="hover:text-black px-3 py-2 transition">CV Design & Add-Ons</a>
-          <a href="#portfolio" class="hover:text-black px-3 py-2 transition">Portfolio</a>
-          <a href="#employers" class="hover:text-black px-3 py-2 transition">Employers</a>
-          <a href="#about" class="hover:text-black px-3 py-2 transition">About Me</a>
-          <a href="#contact" class="hover:text-black px-3 py-2 transition">Contact</a>
-          <a href="https://link-target.net/6146717/Gv8YjkU4AdZ1" target="_blank" class="bg-amber-900 hover:bg-black text-white px-4 py-2 rounded-md transition text-xs shadow-sm ml-2">Premium Career Tools <i class="fas fa-external-link-alt ml-1 text-[10px]"></i></a>
-        </div>
-        
-        <!-- MOBILE MENU TRIGGER -->
-        <div class="lg:hidden">
-          <button id="mobile-menu-btn" class="text-gray-900 hover:text-black focus:outline-none p-2">
-            <i class="fas fa-bars text-xl"></i>
-          </button>
-        </div>
+  <!-- ==================== VERTICAL SIDEBAR NAVIGATION ==================== -->
+  <nav id="sidebar-nav" class="fixed top-0 left-0 h-full w-64 khaki-nav border-r border-[#E6DCC8] z-50 flex flex-col justify-between hidden lg:flex">
+    <div class="pt-6">
+      <div class="px-6 mb-6">
+        <span class="text-base font-extrabold tracking-wider text-black uppercase block">
+          JOBS BY <span class="text-amber-900">JERWIN LUMPAY</span>
+        </span>
+      </div>
+      
+      <!-- VERTICAL MENU ITEMS -->
+      <div class="flex flex-col space-y-1 font-semibold text-sm text-gray-800 px-3">
+        <a href="#home" class="nav-item hover:text-black hover:bg-[#E6DCC8]/40 px-4 py-2.5 rounded-md transition flex items-center gap-3"><i class="fas fa-home w-5"></i>Home</a>
+        <a href="#uae-jobs" class="nav-item hover:text-black hover:bg-[#E6DCC8]/40 px-4 py-2.5 rounded-md transition flex items-center gap-3"><i class="fas fa-map-marker-alt w-5"></i>UAE Jobs</a>
+        <a href="#ph-jobs" class="nav-item hover:text-black hover:bg-[#E6DCC8]/40 px-4 py-2.5 rounded-md transition flex items-center gap-3"><i class="fas fa-flag w-5"></i>PH Jobs</a>
+        <a href="#cv-review" class="nav-item hover:text-black hover:bg-[#E6DCC8]/40 px-4 py-2.5 rounded-md transition flex items-center gap-3"><i class="fas fa-file-contract w-5"></i>Free CV Review</a>
+        <a href="#cv-services" class="nav-item hover:text-black hover:bg-[#E6DCC8]/40 px-4 py-2.5 rounded-md transition flex items-center gap-3"><i class="fas fa-file-invoice w-5"></i>CV Design & Add-Ons</a>
+        <a href="#service-order" class="nav-item hover:text-black hover:bg-[#E6DCC8]/40 px-4 py-2.5 rounded-md transition flex items-center gap-3"><i class="fas fa-shopping-basket w-5"></i>Service Order Log</a>
+        <a href="#payments" class="nav-item hover:text-black hover:bg-[#E6DCC8]/40 px-4 py-2.5 rounded-md transition flex items-center gap-3"><i class="fas fa-credit-card w-5"></i>Payments</a>
+        <a href="#portfolio" class="nav-item hover:text-black hover:bg-[#E6DCC8]/40 px-4 py-2.5 rounded-md transition flex items-center gap-3"><i class="fas fa-briefcase w-5"></i>Portfolio</a>
+        <a href="#employers" class="nav-item hover:text-black hover:bg-[#E6DCC8]/40 px-4 py-2.5 rounded-md transition flex items-center gap-3"><i class="fas fa-handshake w-5"></i>Employers</a>
+        <a href="#policies" class="nav-item hover:text-black hover:bg-[#E6DCC8]/40 px-4 py-2.5 rounded-md transition flex items-center gap-3"><i class="fas fa-gavel w-5"></i>Terms & Policies</a>
+        <a href="#about" class="nav-item hover:text-black hover:bg-[#E6DCC8]/40 px-4 py-2.5 rounded-md transition flex items-center gap-3"><i class="fas fa-user w-5"></i>About Me</a>
+        <a href="#contact" class="nav-item hover:text-black hover:bg-[#E6DCC8]/40 px-4 py-2.5 rounded-md transition flex items-center gap-3"><i class="fas fa-envelope w-5"></i>Contact</a>
       </div>
     </div>
     
-    <!-- MOBILE MENU INTERFACE -->
-    <div id="mobile-menu" class="hidden lg:hidden khaki-nav border-b border-[#E6DCC8] px-4 pt-2 pb-4 space-y-1 shadow-xl">
-      <a href="#home" class="text-gray-900 block px-3 py-2 rounded-md font-bold">Home</a>
-      <a href="#uae-jobs" class="text-gray-900 block px-3 py-2 rounded-md font-bold">UAE Job Openings</a>
-      <a href="#ph-jobs" class="text-gray-900 block px-3 py-2 rounded-md font-bold">Philippines Job Openings</a>
-      <a href="#cv-review" class="text-gray-900 block px-3 py-2 rounded-md font-bold">Free ATS CV Review</a>
-      <a href="#cv-services" class="text-gray-900 block px-3 py-2 rounded-md font-bold">ATS CV Design & Add-Ons</a>
-      <a href="#portfolio" class="text-gray-900 block px-3 py-2 rounded-md font-bold">Sample Portfolio</a>
-      <a href="#employers" class="text-gray-900 block px-3 py-2 rounded-md font-bold">Employers & Referrals</a>
-      <a href="#about" class="text-gray-900 block px-3 py-2 rounded-md font-bold">About Jerwin</a>
-      <a href="#contact" class="text-gray-900 block px-3 py-2 rounded-md font-bold">Contact</a>
-      <a href="https://link-target.net/6146717/Gv8YjkU4AdZ1" target="_blank" class="bg-amber-900 text-white block px-4 py-2.5 rounded-md font-bold text-center shadow mt-2">Premium Career Tools <i class="fas fa-external-link-alt ml-1 text-xs"></i></a>
+    <div class="p-4 border-t border-[#E6DCC8]">
+      <a href="https://link-target.net/6146717/Gv8YjkU4AdZ1" target="_blank" class="w-full block text-center bg-amber-900 hover:bg-black text-white px-4 py-3 rounded-md transition text-xs font-bold shadow-sm">Premium Career Tools <i class="fas fa-external-link-alt ml-1 text-[10px]"></i></a>
     </div>
   </nav>
 
+  <!-- MOBILE NAVIGATION TOP BAR -->
+  <nav class="fixed top-0 left-0 w-full z-50 khaki-nav border-b border-[#E6DCC8] lg:hidden h-16 flex items-center justify-between px-4">
+    <span class="text-sm sm:text-base font-extrabold tracking-wider text-black uppercase">
+      JOBS BY <span class="text-amber-900">JERWIN LUMPAY</span>
+    </span>
+    <button id="mobile-menu-btn" class="text-gray-900 hover:text-black focus:outline-none p-2">
+      <i class="fas fa-bars text-xl"></i>
+    </button>
+  </nav>
+
+  <!-- MOBILE NAVIGATION MENU DROP DOWN -->
+  <div id="mobile-menu" class="hidden fixed top-16 left-0 w-full khaki-nav border-b border-[#E6DCC8] px-4 pt-2 pb-6 space-y-1 shadow-xl z-40 max-h-[calc(100vh-4rem)] overflow-y-auto lg:hidden">
+    <a href="#home" class="text-gray-900 block px-3 py-2 rounded-md font-bold text-sm">Home</a>
+    <a href="#uae-jobs" class="text-gray-900 block px-3 py-2 rounded-md font-bold text-sm">UAE Job Openings</a>
+    <a href="#ph-jobs" class="text-gray-900 block px-3 py-2 rounded-md font-bold text-sm">Philippines Job Openings</a>
+    <a href="#cv-review" class="text-gray-900 block px-3 py-2 rounded-md font-bold text-sm">Free ATS CV Review</a>
+    <a href="#cv-services" class="text-gray-900 block px-3 py-2 rounded-md font-bold text-sm">ATS CV Design & Add-Ons</a>
+    <a href="#service-order" class="text-gray-900 block px-3 py-2 rounded-md font-bold text-sm">Services Ordered Log</a>
+    <a href="#payments" class="text-gray-900 block px-3 py-2 rounded-md font-bold text-sm">Secure Payment Portal</a>
+    <a href="#portfolio" class="text-gray-900 block px-3 py-2 rounded-md font-bold text-sm">Sample Portfolio</a>
+    <a href="#employers" class="text-gray-900 block px-3 py-2 rounded-md font-bold text-sm">Employers & Referrals</a>
+    <a href="#policies" class="text-gray-900 block px-3 py-2 rounded-md font-bold text-sm">Terms & Policies</a>
+    <a href="#about" class="text-gray-900 block px-3 py-2 rounded-md font-bold text-sm">About Jerwin</a>
+    <a href="#contact" class="text-gray-900 block px-3 py-2 rounded-md font-bold text-sm">Contact</a>
+    <a href="https://link-target.net/6146717/Gv8YjkU4AdZ1" target="_blank" class="bg-amber-900 text-white block px-4 py-2.5 rounded-md font-bold text-center shadow mt-2 text-xs">Premium Career Tools <i class="fas fa-external-link-alt ml-1 text-xs"></i></a>
+  </div>
+
   <!-- ==================== HERO SECTION ==================== -->
-  <section id="home" class="relative py-12 md:py-20 flex items-center min-h-screen">
+  <section id="home" class="relative py-12 md:py-20 flex items-center min-h-screen pt-24 lg:pt-12">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         
@@ -397,7 +415,8 @@
               <li><i class="fas fa-check text-amber-900 mr-2"></i> Final Document PDF Delivery</li>
             </ul>
           </div>
-          <a href="https://wa.me/message/EHI3KKXLMSP2N1" target="_blank" class="block text-center text-xs bg-gray-900 hover:bg-black text-white font-bold py-2.5 rounded transition shadow-sm">Avail Basic Package</a>
+          <!-- Form Link Integration -->
+          <a href="https://forms.gle/j1pXHXSxPxQvGccg8" target="_blank" class="block text-center text-xs bg-amber-900 hover:bg-black text-white font-bold py-2.5 rounded transition shadow-sm">Submit Service Request</a>
         </div>
 
         <div class="bg-white p-6 rounded-xl border-2 border-amber-900/40 shadow flex flex-col justify-between relative">
@@ -426,81 +445,8 @@
               <li><i class="fas fa-check text-amber-900 mr-2"></i> Priority Operations Delivery</li>
             </ul>
           </div>
-          <a href="https://wa.me/message/EHI3KKXLMSP2N1" target="_blank" class="block text-center text-xs bg-gray-900 hover:bg-black text-white font-bold py-2.5 rounded transition shadow-sm">Avail Executive Suite</a>
-        </div>
-      </div>
-
-      <!-- ==================== TRACKER & STANDALONE SECURE PAYMENT GRID ==================== -->
-      <div class="max-w-7xl mx-auto mb-12">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
-          
-          <!-- Services Ordered Module Tracker -->
-          <div class="lg:col-span-7 bg-white border border-[#D4CAB4] rounded-xl p-6 shadow-sm space-y-3 h-full">
-            <h4 class="text-sm font-extrabold text-black tracking-wider uppercase flex items-center gap-2">
-              <i class="fas fa-shopping-basket text-amber-950"></i> Services Ordered & Fulfillment Log
-            </h4>
-            <div class="border border-gray-100 rounded-lg overflow-hidden bg-[#FDFBF7]">
-              <table class="w-full text-left text-[11px] font-semibold text-gray-700">
-                <thead class="bg-[#F4F0E6] text-black text-[10px] uppercase tracking-wider border-b border-[#D4CAB4]">
-                  <tr>
-                    <th class="p-3">Service Track</th>
-                    <th class="p-3">Fulfillment Processing</th>
-                    <th class="p-3 text-right">Fee Rate</th>
-                  </tr>
-                </thead>
-                <tbody class="divide-y divide-gray-100">
-                  <tr>
-                    <td class="p-3 font-bold text-gray-900">Professional ATS CV System</td>
-                    <td class="p-3 text-amber-900"><i class="fas fa-clock mr-1"></i> Under Active Layout Design</td>
-                    <td class="p-3 text-right text-gray-900">Standard Base</td>
-                  </tr>
-                  <tr>
-                    <td class="p-3 font-bold text-gray-900">Premium Add-on Suite</td>
-                    <td class="p-3 text-gray-500"><i class="fas fa-pause-circle mr-1"></i> Awaiting Asset Assignment</td>
-                    <td class="p-3 text-right text-gray-900">Selected Add-on</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-          
-          <!-- Standalone Secure Ziina Checkout Component -->
-          <div class="lg:col-span-5 bg-white border border-[#D4CAB4] rounded-xl p-6 shadow-sm space-y-4">
-            <div class="flex items-center justify-between border-b border-gray-100 pb-3">
-              <div>
-                <h4 class="font-extrabold text-sm text-black uppercase tracking-wider">Secure Portal Checkout</h4>
-                <p class="text-[10px] text-emerald-700 font-bold"><i class="fas fa-shield-alt mr-1"></i> 0% Added Surcharges</p>
-              </div>
-              <!-- Payment Gateway Network Badges -->
-              <div class="flex items-center gap-1.5 text-base text-gray-700">
-                <i class="fab fa-cc-apple-pay hover:text-black transition" title="Apple Pay"></i>
-                <i class="fab fa-cc-visa hover:text-blue-600 transition" title="Visa"></i>
-                <i class="fab fa-cc-mastercard hover:text-red-500 transition" title="Mastercard"></i>
-                <i class="fab fa-cc-amex hover:text-cyan-600 transition" title="American Express"></i>
-                <span class="text-[10px] font-extrabold bg-gray-100 border border-gray-300 text-gray-800 px-1 rounded tracking-tighter" title="Google Pay">G Pay</span>
-              </div>
-            </div>
-
-            <p class="text-[11px] text-gray-600 leading-relaxed font-medium">
-              Select an option below to secure processing parameters natively via <span class="font-bold text-black underline decoration-amber-900">Ziina</span>. All cards, Apple Pay, and Google Pay lines are completely supported.
-            </p>
-
-            <div class="space-y-2 pt-1">
-              <!-- Primary Card Button -->
-              <a href="https://pay.ziina.com/JerwinL?source=app" target="_blank" class="block w-full text-center bg-amber-900 hover:bg-black text-white font-bold text-xs py-3.5 rounded-lg transition shadow transform hover:-translate-y-0.5 uppercase tracking-wider">
-                Proceed to Pay via Card / Apple Pay <i class="fas fa-credit-card ml-1.5 text-[10px]"></i>
-              </a>
-              <!-- Secondary Express Checkout -->
-              <a href="https://pay.ziina.com/JerwinL?source=app" target="_blank" class="block w-full text-center bg-black hover:bg-gray-800 text-white font-bold text-xs py-3.5 rounded-lg transition shadow flex items-center justify-center gap-2">
-                <i class="fab fa-apple text-sm"></i> Express Checkout with Apple Pay / G Pay
-              </a>
-            </div>
-
-            <p class="text-[9px] text-gray-400 font-semibold text-center">
-              🔒 Encrypted End-to-End Vault Processing via Ziina Central Network.
-            </p>
-          </div>
-          
+          <!-- Form Link Integration -->
+          <a href="https://forms.gle/j1pXHXSxPxQvGccg8" target="_blank" class="block text-center text-xs bg-amber-900 hover:bg-black text-white font-bold py-2.5 rounded transition shadow-sm">Submit Service Request</a>
         </div>
       </div>
 
@@ -518,7 +464,7 @@
               <h4 class="font-bold text-sm text-black mb-1">LinkedIn Profile Optimization</h4>
               <p class="text-[11px] text-gray-600 leading-relaxed font-medium">Re-indexing profile headlines, summary markers, and search algorithm tags to draw active recruiter visibility views.</p>
             </div>
-            <a href="https://wa.me/message/EHI3KKXLMSP2N1" target="_blank" class="mt-4 text-[11px] bg-[#F4F0E6] hover:bg-amber-900 hover:text-white text-black font-bold text-center py-2 rounded transition">Add to Order</a>
+            <a href="https://forms.gle/j1pXHXSxPxQvGccg8" target="_blank" class="mt-4 text-[11px] bg-[#F4F0E6] hover:bg-amber-900 hover:text-white text-black font-bold text-center py-2 rounded transition">Add to Order</a>
           </div>
           
           <div class="bg-white p-5 rounded-xl border border-[#E6DCC8] shadow-sm flex flex-col justify-between">
@@ -527,7 +473,7 @@
               <h4 class="font-bold text-sm text-black mb-1">Cover Letter Writing</h4>
               <p class="text-[11px] text-gray-600 leading-relaxed font-medium">Modular, custom-tailored letters presenting operational metrics clearly to human asset screening groups.</p>
             </div>
-            <a href="https://wa.me/message/EHI3KKXLMSP2N1" target="_blank" class="mt-4 text-[11px] bg-[#F4F0E6] hover:bg-amber-900 hover:text-white text-black font-bold text-center py-2 rounded transition">Add to Order</a>
+            <a href="https://forms.gle/j1pXHXSxPxQvGccg8" target="_blank" class="mt-4 text-[11px] bg-[#F4F0E6] hover:bg-amber-900 hover:text-white text-black font-bold text-center py-2 rounded transition">Add to Order</a>
           </div>
 
           <div class="bg-white p-5 rounded-xl border border-[#E6DCC8] shadow-sm flex flex-col justify-between">
@@ -536,7 +482,7 @@
               <h4 class="font-bold text-sm text-black mb-1">Express 24-Hour Delivery</h4>
               <p class="text-[11px] text-gray-600 leading-relaxed font-medium">Bypass queue pipelines. Your comprehensive re-designed asset processed and prioritized in under 24 hours.</p>
             </div>
-            <a href="https://wa.me/message/EHI3KKXLMSP2N1" target="_blank" class="mt-4 text-[11px] bg-[#F4F0E6] hover:bg-amber-900 hover:text-white text-black font-bold text-center py-2 rounded transition">Add to Order</a>
+            <a href="https://forms.gle/j1pXHXSxPxQvGccg8" target="_blank" class="mt-4 text-[11px] bg-[#F4F0E6] hover:bg-amber-900 hover:text-white text-black font-bold text-center py-2 rounded transition">Add to Order</a>
           </div>
 
           <div class="bg-white p-5 rounded-xl border border-[#E6DCC8] shadow-sm flex flex-col justify-between">
@@ -545,11 +491,89 @@
               <h4 class="font-bold text-sm text-black mb-1">Job Application Assistance</h4>
               <p class="text-[11px] text-gray-600 leading-relaxed font-medium">Direct management assistance navigating target submission pages, handling profiling fields, and submission logs.</p>
             </div>
-            <a href="https://wa.me/message/EHI3KKXLMSP2N1" target="_blank" class="mt-4 text-[11px] bg-[#F4F0E6] hover:bg-amber-900 hover:text-white text-black font-bold text-center py-2 rounded transition">Add to Order</a>
+            <a href="https://forms.gle/j1pXHXSxPxQvGccg8" target="_blank" class="mt-4 text-[11px] bg-[#F4F0E6] hover:bg-amber-900 hover:text-white text-black font-bold text-center py-2 rounded transition">Add to Order</a>
           </div>
         </div>
       </div>
 
+    </div>
+  </section>
+
+  <!-- ==================== SEPARATE NAVIGATION: SERVICE ORDER PAGE ==================== -->
+  <section id="service-order" class="py-16 border-b border-[#E6DCC8]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto bg-white border border-[#D4CAB4] rounded-xl p-6 shadow-sm space-y-4">
+        <div class="border-b border-gray-100 pb-3">
+          <h2 class="text-xl font-extrabold text-black uppercase tracking-wider flex items-center gap-2">
+            <i class="fas fa-shopping-basket text-amber-950"></i> Services Ordered & Fulfillment Log
+          </h2>
+          <p class="text-xs text-gray-500 mt-1">Track active design operations queue placement updates here.</p>
+        </div>
+        <div class="border border-gray-100 rounded-lg overflow-hidden bg-[#FDFBF7]">
+          <table class="w-full text-left text-[11px] font-semibold text-gray-700">
+            <thead class="bg-[#F4F0E6] text-black text-[10px] uppercase tracking-wider border-b border-[#D4CAB4]">
+              <tr>
+                <th class="p-3">Service Track</th>
+                <th class="p-3">Fulfillment Processing</th>
+                <th class="p-3 text-right">Fee Rate</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-100">
+              <tr>
+                <td class="p-3 font-bold text-gray-900">Professional ATS CV System</td>
+                <td class="p-3 text-amber-900"><i class="fas fa-clock mr-1"></i> Under Active Layout Design</td>
+                <td class="p-3 text-right text-gray-900">Standard Base</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-bold text-gray-900">Premium Add-on Suite</td>
+                <td class="p-3 text-gray-500"><i class="fas fa-pause-circle mr-1"></i> Awaiting Asset Assignment</td>
+                <td class="p-3 text-right text-gray-900">Selected Add-on</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SEPARATE NAVIGATION: PAYMENTS PAGE ==================== -->
+  <section id="payments" class="py-16 bg-[#FDFBF7] border-b border-[#E6DCC8]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-2xl mx-auto bg-white border border-[#D4CAB4] rounded-xl p-6 shadow-sm space-y-4">
+        <div class="flex items-center justify-between border-b border-gray-100 pb-3 flex-wrap gap-2">
+          <div>
+            <h2 class="font-extrabold text-xl text-black uppercase tracking-wider">Secure Portal Checkout</h2>
+            <p class="text-[10px] text-emerald-700 font-bold mt-0.5"><i class="fas fa-shield-alt mr-1"></i> 0% Added Surcharges</p>
+          </div>
+          <!-- Payment Gateway Network Badges -->
+          <div class="flex items-center gap-1.5 text-base text-gray-700">
+            <i class="fab fa-cc-apple-pay hover:text-black transition" title="Apple Pay"></i>
+            <i class="fab fa-cc-visa hover:text-blue-600 transition" title="Visa"></i>
+            <i class="fab fa-cc-mastercard hover:text-red-500 transition" title="Mastercard"></i>
+            <i class="fab fa-cc-amex hover:text-cyan-600 transition" title="American Express"></i>
+            <span class="text-[10px] font-extrabold bg-gray-100 border border-gray-300 text-gray-800 px-1 rounded tracking-tighter" title="Google Pay">G Pay</span>
+          </div>
+        </div>
+
+        <p class="text-xs text-gray-600 leading-relaxed font-medium">
+          Select an option below to secure processing parameters natively via <span class="font-bold text-black underline decoration-amber-900">Ziina</span>. All cards, Apple Pay, and Google Pay lines are completely supported.
+        </p>
+
+        <div class="space-y-2 pt-1">
+          <!-- Primary Card Button -->
+          <a href="https://pay.ziina.com/JerwinL?source=app" target="_blank" class="block w-full text-center bg-amber-900 hover:bg-black text-white font-bold text-xs py-3.5 rounded-lg transition shadow transform hover:-translate-y-0.5 uppercase tracking-wider">
+            Proceed to Pay via Card / Apple Pay <i class="fas fa-credit-card ml-1.5 text-[10px]"></i>
+          </a>
+          <!-- Secondary Express Checkout -->
+          <a href="https://pay.ziina.com/JerwinL?source=app" target="_blank" class="block w-full text-center bg-black hover:bg-gray-800 text-white font-bold text-xs py-3.5 rounded-lg transition shadow flex items-center justify-center gap-2">
+            <i class="fab fa-apple text-sm"></i> Express Checkout with Apple Pay / G Pay
+          </a>
+        </div>
+
+        <p class="text-[9px] text-gray-400 font-semibold text-center mt-2">
+          🔒 Encrypted End-to-End Vault Processing via Ziina Central Network.
+        </p>
+      </div>
     </div>
   </section>
 
@@ -655,6 +679,73 @@
     </div>
   </section>
 
+  <!-- ==================== NEW PAGE: TERMS & CONDITIONS DEPOSIT, REFUND & CANCELLATION POLICIES ==================== -->
+  <section id="policies" class="py-16 bg-[#FDFBF7] border-t border-[#D4CAB4]">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-10">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-black">Terms & Conditions</h2>
+        <p class="text-xs text-amber-900 font-bold uppercase tracking-wider mt-1">Service Operations Commitments Framework</p>
+        <div class="h-1 w-12 bg-amber-900 mx-auto mt-3 rounded-full"></div>
+      </div>
+
+      <!-- INTERACTIVE POLICY LAYOUT CONTAINER -->
+      <div class="bg-white rounded-2xl border border-[#E6DCC8] shadow-sm overflow-hidden grid grid-cols-1 md:grid-cols-12">
+        <div class="md:col-span-4 bg-[#F4F0E6] p-4 flex flex-col space-y-1 border-b md:border-b-0 md:border-r border-[#D4CAB4]">
+          <button onclick="switchTab('deposit-tab')" id="deposit-tab-btn" class="policy-btn w-full text-left font-bold text-xs px-4 py-3 rounded-lg transition bg-amber-900 text-white shadow-sm">Deposit Policy</button>
+          <button onclick="switchTab('cancel-tab')" id="cancel-tab-btn" class="policy-btn w-full text-left font-bold text-xs px-4 py-3 rounded-lg transition text-gray-700 hover:bg-[#E6DCC8]/50">Cancellation Policy</button>
+          <button onclick="switchTab('refund-tab')" id="refund-tab-btn" class="policy-btn w-full text-left font-bold text-xs px-4 py-3 rounded-lg transition text-gray-700 hover:bg-[#E6DCC8]/50">Refund Policy</button>
+          <button onclick="switchTab('revision-tab')" id="revision-tab-btn" class="policy-btn w-full text-left font-bold text-xs px-4 py-3 rounded-lg transition text-gray-700 hover:bg-[#E6DCC8]/50">Revision & Delivery</button>
+        </div>
+        
+        <div class="md:col-span-8 p-6 sm:p-8 min-h-[250px] flex flex-col justify-between">
+          <!-- Policy Content Items -->
+          <div id="deposit-tab" class="policy-content space-y-3">
+            <h3 class="text-base font-extrabold text-black flex items-center gap-2"><i class="fas fa-wallet text-amber-900"></i> Deposit Policy</h3>
+            <ul class="text-xs font-semibold text-gray-700 space-y-2">
+              <li class="flex items-start gap-2">• <span class="text-gray-900">A 50% upfront deposit is required before work begins.</span></li>
+              <li class="flex items-start gap-2">• <span class="text-gray-900">The remaining balance is due upon final delivery.</span></li>
+              <li class="flex items-start gap-2">• <span class="text-gray-900">Work will not start until the deposit is received.</span></li>
+            </ul>
+          </div>
+
+          <div id="cancel-tab" class="policy-content space-y-3 hidden">
+            <h3 class="text-base font-extrabold text-black flex items-center gap-2"><i class="fas fa-times-circle text-amber-900"></i> Cancellation Policy</h3>
+            <ul class="text-xs font-semibold text-gray-700 space-y-2">
+              <li class="flex items-start gap-2">• <span class="text-gray-900">Client may cancel before work starts → full refund of deposit (if no work initiated).</span></li>
+              <li class="flex items-start gap-2">• <span class="text-gray-900">If work has already started → deposit is non-refundable.</span></li>
+              <li class="flex items-start gap-2">• <span class="text-gray-900">Once the final draft is delivered → cancellation is no longer accepted.</span></li>
+            </ul>
+          </div>
+
+          <div id="refund-tab" class="policy-content space-y-3 hidden">
+            <h3 class="text-base font-extrabold text-black flex items-center gap-2"><i class="fas fa-hand-holding-usd text-amber-900"></i> Refund Policy</h3>
+            <ul class="text-xs font-semibold text-gray-700 space-y-2">
+              <li class="flex items-start gap-2">• <span class="text-gray-900">Refunds are only applicable if service has not started, or the provider is unable to deliver the agreed service.</span></li>
+              <li class="flex items-start gap-2">• <span class="text-gray-900">No refunds for completed or delivered work.</span></li>
+              <li class="flex items-start gap-2">• <span class="text-gray-900">Minor revisions are included as per package scope.</span></li>
+            </ul>
+          </div>
+
+          <div id="revision-tab" class="policy-content space-y-4 hidden">
+            <div>
+              <h4 class="text-xs uppercase font-extrabold text-amber-900 mb-1">Revision Policy</h4>
+              <p class="text-xs font-semibold text-gray-700">Each package includes a set number of revisions (e.g., 1–2 rounds). Additional revisions may incur extra charges.</p>
+            </div>
+            <div>
+              <h4 class="text-xs uppercase font-extrabold text-amber-900 mb-1">Delivery Commitment</h4>
+              <p class="text-xs font-semibold text-gray-700">Timelines are agreed before project start. Delays caused by missing client information are not the responsibility of the service provider.</p>
+            </div>
+          </div>
+
+          <!-- Footer Principle Note -->
+          <div class="mt-6 pt-4 border-t border-gray-100 text-[11px] text-gray-500 font-medium italic">
+            <strong>Key Principle:</strong> This policy is designed to maintain fairness, protect time investment, and ensure professional service delivery standards on both sides.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ==================== CAREER RESOURCES PAGE ==================== -->
   <section id="resources" class="py-16 bg-[#F4F0E6] border-t border-b border-[#D4CAB4]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -740,6 +831,7 @@
 
   <!-- ==================== JAVASCRIPT LOGIC ==================== -->
   <script>
+    // Mobile menu toggle triggers
     const btn = document.getElementById('mobile-menu-btn');
     const menu = document.getElementById('mobile-menu');
     
@@ -750,6 +842,45 @@
     document.querySelectorAll('#mobile-menu a').forEach(link => {
       link.addEventListener('click', () => {
         menu.classList.add('hidden');
+      });
+    });
+
+    // Interactive Policy Tab Selector Logic
+    function switchTab(tabId) {
+      document.querySelectorAll('.policy-content').forEach(content => {
+        content.classList.add('hidden');
+      });
+      document.querySelectorAll('.policy-btn').forEach(button => {
+        button.classList.remove('bg-amber-900', 'text-white', 'shadow-sm');
+        button.classList.add('text-gray-700', 'hover:bg-[#E6DCC8]/50');
+      });
+      
+      document.getElementById(tabId).classList.remove('hidden');
+      document.getElementById(tabId + '-btn').classList.add('bg-amber-900', 'text-white', 'shadow-sm');
+      document.getElementById(tabId + '-btn').classList.remove('text-gray-700', 'hover:bg-[#E6DCC8]/50');
+    }
+
+    // Dynamic Navigation Highlighting with Scroll Spy
+    const sections = document.querySelectorAll('section');
+    const navItems = document.querySelectorAll('.nav-item');
+
+    window.addEventListener('scroll', () => {
+      let activeSectionId = '';
+      
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        // Check window position scroll offset values
+        if (window.scrollY >= (sectionTop - 180)) {
+          activeSectionId = section.getAttribute('id');
+        }
+      });
+
+      navItems.forEach(item => {
+        item.classList.remove('nav-active');
+        if (item.getAttribute('href') === `#${activeSectionId}`) {
+          item.classList.add('nav-active');
+        }
       });
     });
   </script>
