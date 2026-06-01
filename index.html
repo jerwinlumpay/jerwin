@@ -3,116 +3,121 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jerwin L. | Operations & Talent Acquisition Hub</title>
+  <title>Jobs by Jerwin Lumpay | Connecting Talent with Opportunity</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
     
-    /* Creamy white pearly khaki color palette */
+    /* Pearly Creamy Khaki Palette */
     body { 
       font-family: 'Plus Jakarta Sans', sans-serif; 
-      background-color: #FDFBF7; /* Pearly Cream White */
-      color: #1A1A1A; /* Sharp professional black text */
+      background-color: #FDFBF7; /* Creamy Pearly White */
+      color: #1A1A1A; /* Solid professional black text */
     }
-    .khaki-panel { 
-      background: rgba(244, 240, 230, 0.85); /* Smooth Khaki Pearl */
-      backdrop-filter: blur(12px); 
-      border: 1px solid rgba(212, 202, 180, 0.4); 
+    .khaki-nav { 
+      background: rgba(244, 240, 230, 0.9); /* Smooth Khaki Pearl */
+      backdrop-filter: blur(14px); 
+      border-b: 1px solid #E6DCC8; 
     }
     .khaki-card { 
       background: #F4F0E6; 
-      border: 1px solid #E6DCC8; 
-    }
-    .text-premium {
-      color: #2D2A22;
+      border: 1px solid #D4CAB4; 
     }
     html { scroll-behavior: smooth; }
   </style>
 </head>
-<body class="selection:bg-[#E6DCC8] selection:text-black">
+<body class="selection:bg-[#E6DCC8] selection:text-black pt-16">
 
-  <!-- NAVIGATION BAR (Mobile friendly with fluid scaling) -->
-  <nav class="fixed top-0 left-0 w-full z-50 khaki-panel border-b border-[#E6DCC8]">
+  <!-- ==================== NAVIGATION BAR ==================== -->
+  <nav class="fixed top-0 left-0 w-full z-50 khaki-nav border-b border-[#E6DCC8]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16">
         <div class="flex-shrink-0">
-          <span class="text-base sm:text-lg font-bold tracking-wider text-black uppercase">JL <span class="text-amber-800">TALENT HUB</span></span>
+          <span class="text-base sm:text-lg font-extrabold tracking-wider text-black uppercase">
+            JOBS BY <span class="text-amber-900">JERWIN LUMPAY</span>
+          </span>
         </div>
         
         <!-- DESKTOP MENU -->
-        <div class="hidden md:block">
-          <div class="ml-10 flex items-baseline space-x-6">
-            <a href="#about" class="text-gray-800 hover:text-black px-3 py-2 text-sm font-semibold transition">About Me</a>
-            <a href="#cv-services" class="text-gray-800 hover:text-black px-3 py-2 text-sm font-semibold transition">CV Optimization</a>
-            <a href="#referrals" class="text-gray-800 hover:text-black px-3 py-2 text-sm font-semibold transition">Job Referrals</a>
-            <!-- ADSTERRA SMARTLINK MONETIZATION HOOK -->
-            <a href="PASTE_YOUR_ADSTERRA_SMARTLINK_HERE" target="_blank" class="bg-amber-900 hover:bg-black text-white px-4 py-2 rounded-md text-sm font-semibold transition shadow-sm">Premium Career Tools <i class="fas fa-external-link-alt ml-1 text-xs"></i></a>
-          </div>
+        <div class="hidden lg:flex items-center space-x-1 font-semibold text-sm text-gray-800">
+          <a href="#home" class="hover:text-black px-3 py-2 transition">Home</a>
+          <a href="#uae-jobs" class="hover:text-black px-3 py-2 transition">UAE Jobs</a>
+          <a href="#ph-jobs" class="hover:text-black px-3 py-2 transition">PH Jobs</a>
+          <a href="#cv-review" class="hover:text-black px-3 py-2 transition">Free CV Review</a>
+          <a href="#cv-services" class="hover:text-black px-3 py-2 transition">CV Design Services</a>
+          <a href="#employers" class="hover:text-black px-3 py-2 transition">Employers</a>
+          <a href="#about" class="hover:text-black px-3 py-2 transition">About Me</a>
+          <a href="#contact" class="hover:text-black px-3 py-2 transition">Contact</a>
+          <!-- MONETIZED PREMIUM ACCESS CARD HOOK -->
+          <a href="PASTE_YOUR_ADSTERRA_SMARTLINK_HERE" target="_blank" class="bg-amber-900 hover:bg-black text-white px-4 py-2 rounded-md transition text-xs shadow-sm ml-2">Premium Career Tools <i class="fas fa-external-link-alt ml-1 text-[10px]"></i></a>
         </div>
         
-        <!-- MOBILE MENU BUTTON -->
-        <div class="md:hidden">
-          <button id="mobile-menu-btn" class="text-gray-800 hover:text-black focus:outline-none p-2">
+        <!-- MOBILE MENU TRIGGER -->
+        <div class="lg:hidden">
+          <button id="mobile-menu-btn" class="text-gray-900 hover:text-black focus:outline-none p-2">
             <i class="fas fa-bars text-xl"></i>
           </button>
         </div>
       </div>
     </div>
     
-    <!-- MOBILE MENU LAYER -->
-    <div id="mobile-menu" class="hidden md:hidden khaki-panel border-b border-[#E6DCC8] px-4 pt-2 pb-4 space-y-2 shadow-lg">
-      <a href="#about" class="text-gray-900 block px-3 py-2 rounded-md text-base font-semibold">About Me</a>
-      <a href="#cv-services" class="text-gray-900 block px-3 py-2 rounded-md text-base font-semibold">CV Optimization</a>
-      <a href="#referrals" class="text-gray-900 block px-3 py-2 rounded-md text-base font-semibold">Job Referrals</a>
-      <a href="PASTE_YOUR_ADSTERRA_SMARTLINK_HERE" target="_blank" class="bg-amber-900 text-white block px-4 py-2.5 rounded-md text-base font-semibold text-center shadow">Premium Career Tools <i class="fas fa-external-link-alt ml-1"></i></a>
+    <!-- MOBILE MENU INTERFACE -->
+    <div id="mobile-menu" class="hidden lg:hidden khaki-nav border-b border-[#E6DCC8] px-4 pt-2 pb-4 space-y-1 shadow-xl">
+      <a href="#home" class="text-gray-900 block px-3 py-2 rounded-md font-bold">Home</a>
+      <a href="#uae-jobs" class="text-gray-900 block px-3 py-2 rounded-md font-bold">UAE Job Openings</a>
+      <a href="#ph-jobs" class="text-gray-900 block px-3 py-2 rounded-md font-bold">Philippines Job Openings</a>
+      <a href="#cv-review" class="text-gray-900 block px-3 py-2 rounded-md font-bold">Free ATS CV Review</a>
+      <a href="#cv-services" class="text-gray-900 block px-3 py-2 rounded-md font-bold">ATS CV Design Services</a>
+      <a href="#employers" class="text-gray-900 block px-3 py-2 rounded-md font-bold">Employers & Referrals</a>
+      <a href="#about" class="text-gray-900 block px-3 py-2 rounded-md font-bold">About Jerwin</a>
+      <a href="#contact" class="text-gray-900 block px-3 py-2 rounded-md font-bold">Contact</a>
+      <a href="PASTE_YOUR_ADSTERRA_SMARTLINK_HERE" target="_blank" class="bg-amber-900 text-white block px-4 py-2.5 rounded-md font-bold text-center shadow mt-2">Premium Career Tools <i class="fas fa-external-link-alt ml-1 text-xs"></i></a>
     </div>
   </nav>
 
-  <!-- HERO & ABOUT ME OVERVIEW SECTION -->
-  <section id="about" class="relative pt-28 pb-16 md:pt-40 md:pb-24 flex items-center min-h-screen">
+  <!-- ==================== HERO SECTION & ABOUT ME OVERVIEW ==================== -->
+  <section id="home" class="relative py-16 md:py-24 flex items-center min-h-screen">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         
-        <!-- LEFT TEXT COLUMN -->
+        <!-- MAIN HEADLINES -->
         <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
-          <div class="inline-flex items-center space-x-2 bg-[#E6DCC8]/50 border border-[#D4CAB4] px-3 py-1 rounded-full text-xs font-bold text-amber-900 tracking-wide uppercase">
-            <span>Platform Director Overview</span>
+          <div class="inline-flex items-center space-x-2 bg-[#E6DCC8]/60 border border-[#D4CAB4] px-3 py-1 rounded-full text-xs font-bold text-amber-950 uppercase tracking-wider">
+            <span>Connecting Talent with Opportunity</span>
           </div>
           <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-black tracking-tight leading-tight">
-            Meet <span class="text-amber-900">Jerwin L.</span>
+            Find Your Next Career Opportunity Today
           </h1>
-          <p class="text-lg sm:text-xl font-bold text-gray-800">
-            Admin — with Corporate HR & Global Talent Acquisition Background
-          </p>
-          <p class="text-base sm:text-lg text-gray-700 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-medium">
-            Dedicated to helping the workless find their dream job. Utilizing over a decade of extensive operational leadership, global recruitment filters, and processing systems, I structure high-impact professional guidance that successfully bridges applicant gaps to place talent directly into elite corporate ecosystems.
+          <p class="text-base sm:text-lg text-gray-800 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-medium">
+            Helping professionals secure opportunities in the UAE and the Philippines through verified job listings, ATS-compliant resumes, and recruitment referral services.
           </p>
           
           <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
-            <a href="#cv-services" class="w-full sm:w-auto bg-amber-900 hover:bg-black text-white px-8 py-3.5 rounded-lg font-bold text-center transition shadow-md">Request CV Review <i class="fas fa-file-invoice ml-2"></i></a>
-            <a href="#referrals" class="w-full sm:w-auto border-2 border-amber-900/40 hover:border-black hover:bg-amber-950/5 text-amber-950 px-8 py-3.5 rounded-lg font-bold text-center transition">Explore Job Referrals <i class="fas fa-share-nodes ml-2"></i></a>
+            <a href="#uae-jobs" class="w-full sm:w-auto bg-amber-900 hover:bg-black text-white px-8 py-3.5 rounded-lg font-bold text-center transition shadow">Browse Jobs <i class="fas fa-briefcase ml-2"></i></a>
+            <a href="#cv-review" class="w-full sm:w-auto bg-white hover:bg-gray-100 text-black border border-[#D4CAB4] px-8 py-3.5 rounded-lg font-bold text-center transition shadow-sm">Free ATS CV Review <i class="fas fa-file-invoice ml-2"></i></a>
+            <a href="https://wa.me/message/EHI3KKXLMSP2N1" target="_blank" class="w-full sm:w-auto bg-[#25D366] hover:bg-[#20BA5A] text-white px-8 py-3.5 rounded-lg font-bold text-center transition shadow"><i class="fab fa-whatsapp mr-2 text-lg"></i>WhatsApp</a>
           </div>
         </div>
 
-        <!-- RIGHT IDENTITY PROFILE CARD -->
-        <div class="lg:col-span-5 flex justify-center w-full">
-          <div class="khaki-card p-6 sm:p-8 rounded-2xl max-w-md w-full shadow-md relative border border-[#E6DCC8]">
-            <div class="absolute -top-3 right-4 bg-amber-900 text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded shadow">Active Lead</div>
+        <!-- ABOUT ME OVERVIEW PROFILE CARD -->
+        <div id="about-summary" class="lg:col-span-5 flex justify-center w-full">
+          <div class="khaki-card p-6 sm:p-8 rounded-2xl max-w-md w-full shadow-md relative border border-[#D4CAB4]">
+            <div class="absolute -top-3 right-4 bg-amber-900 text-white text-[10px] font-extrabold uppercase tracking-widest px-3 py-1 rounded shadow">Platform Identity</div>
             <div class="flex items-center space-x-4 mb-6">
-              <div class="bg-white p-4 rounded-xl text-amber-900 border border-[#E6DCC8] shadow-sm"><i class="fas fa-id-card text-3xl"></i></div>
+              <div class="bg-white p-4 rounded-xl text-amber-900 border border-[#E6DCC8] shadow-sm"><i class="fas fa-user-tie text-3xl"></i></div>
               <div>
-                <h3 class="text-black font-extrabold text-xl">Jerwin L.</h3>
-                <p class="text-xs font-bold text-amber-800">Global HR TA & Operations Admin</p>
+                <h3 class="text-black font-extrabold text-xl">Meet Jerwin L.</h3>
+                <p class="text-xs font-bold text-amber-900">Admin — globally aligned with HR TA Background</p>
               </div>
             </div>
-            <p class="text-sm text-gray-800 italic leading-relaxed border-b border-[#E6DCC8] pb-4 mb-4 font-medium">
-              "My mission is clear: turning periods of clean transition into long-term career milestones by aligning applicants with verified global standard frameworks."
+            <p class="text-sm text-gray-800 italic leading-relaxed border-b border-[#D4CAB4] pb-4 mb-4 font-semibold text-center lg:text-left">
+              "Dedicated to helping the workless find their dream job across dynamic corporate tracking channels."
             </p>
-            <div class="space-y-3 font-semibold text-xs sm:text-sm text-gray-800">
-              <div class="flex justify-between"><span class="text-gray-500 font-medium">Focus Objective:</span><span class="text-black">Helping Workless Applicants</span></div>
-              <div class="flex justify-between"><span class="text-gray-500 font-medium">Expertise Matrix:</span><span class="text-black">Global Talent Acquisition (TA)</span></div>
-              <div class="flex justify-between"><span class="text-gray-500 font-medium">Core Validation:</span><span class="text-amber-900">Applicant Tracking Systems (ATS)</span></div>
+            <div class="space-y-2 text-xs sm:text-sm font-bold text-gray-800">
+              <div class="flex justify-between"><span class="text-gray-500 font-medium">Core Mission:</span><span class="text-black">Helping Workless Worldwide</span></div>
+              <div class="flex justify-between"><span class="text-gray-500 font-medium">Oversight Strategy:</span><span class="text-black">Global Talent Sourcing</span></div>
+              <div class="flex justify-between"><span class="text-gray-500 font-medium">Service Alignment:</span><span class="text-amber-900">ATS Formatting Processing</span></div>
             </div>
           </div>
         </div>
@@ -121,127 +126,491 @@
     </div>
   </section>
 
-  <!-- CV OPTIMIZATION SERVICE REQUEST SECTION -->
-  <section id="cv-services" class="py-20 md:py-28 border-t border-[#E6DCC8] bg-[#F7F4EB]">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      
+  <!-- ==================== VALUE PROPOSITIONS & STRATEGIES ==================== -->
+  <section class="py-16 bg-[#F4F0E6] border-t border-b border-[#D4CAB4]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-black">Why Choose Jobs by Jerwin Lumpay</h2>
+        <div class="h-1 w-12 bg-amber-900 mx-auto mt-3 rounded-full"></div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white p-6 rounded-xl border border-[#E6DCC8] shadow-sm text-center">
+          <i class="fas fa-check-circle text-amber-900 text-3xl mb-3"></i>
+          <h3 class="text-base font-bold text-black mb-1">Verified Job Opportunities</h3>
+          <p class="text-xs text-gray-600 leading-relaxed font-medium">Access regularly updated vacancies from trusted employers.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl border border-[#E6DCC8] shadow-sm text-center">
+          <i class="fas fa-file-signature text-amber-900 text-3xl mb-3"></i>
+          <h3 class="text-base font-bold text-black mb-1">Free ATS Resume Reviews</h3>
+          <p class="text-xs text-gray-600 leading-relaxed font-medium">Receive professional feedback to improve your resume structure.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl border border-[#E6DCC8] shadow-sm text-center">
+          <i class="fas fa-laptop-code text-amber-900 text-3xl mb-3"></i>
+          <h3 class="text-base font-bold text-black mb-1">ATS-Compliant CV Design</h3>
+          <p class="text-xs text-gray-600 leading-relaxed font-medium">Increase your chances of passing electronic scanning filters easily.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl border border-[#E6DCC8] shadow-sm text-center">
+          <i class="fas fa-people-arrows text-amber-900 text-3xl mb-3"></i>
+          <h3 class="text-base font-bold text-black mb-1">Recruitment Referral Support</h3>
+          <p class="text-xs text-gray-600 leading-relaxed font-medium">Connect directly with active corporate recruiters and hiring teams.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FEATURED JOB CATEGORIES ==================== -->
+  <section class="py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-2xl mx-auto mb-12">
-        <span class="text-xs font-bold uppercase tracking-widest text-amber-800">Tailored Enhancements</span>
-        <h2 class="text-3xl font-extrabold text-black mt-1">CV Optimization Services</h2>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-black">Featured Categories</h2>
+        <div class="h-1 w-12 bg-amber-900 mx-auto mt-3 rounded-full"></div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Admin -->
+        <div class="khaki-card p-5 rounded-xl">
+          <h3 class="font-bold text-black border-b border-[#D4CAB4] pb-2 mb-3"><i class="fas fa-folder-open mr-2 text-amber-900"></i>Administration</h3>
+          <ul class="text-xs space-y-2 text-gray-800 font-semibold">
+            <li>• Administrative Assistant</li>
+            <li>• Executive Assistant</li>
+            <li>• Office Administrator</li>
+            <li>• Data Entry</li>
+          </ul>
+        </div>
+        
+        <!-- CS -->
+        <div class="khaki-card p-5 rounded-xl">
+          <h3 class="font-bold text-black border-b border-[#D4CAB4] pb-2 mb-3"><i class="fas fa-headset mr-2 text-amber-900"></i>Customer Service</h3>
+          <ul class="text-xs space-y-2 text-gray-800 font-semibold">
+            <li>• Customer Service Representative</li>
+            <li>• Call Center Agent</li>
+            <li>• Customer Support Specialist</li>
+          </ul>
+        </div>
+
+        <!-- Front Office -->
+        <div class="khaki-card p-5 rounded-xl">
+          <h3 class="font-bold text-black border-b border-[#D4CAB4] pb-2 mb-3"><i class="fas fa-hotel mr-2 text-amber-900"></i>Front Office</h3>
+          <ul class="text-xs space-y-2 text-gray-800 font-semibold">
+            <li>• Receptionist</li>
+            <li>• Front Desk Executive</li>
+            <li>• Guest Relations</li>
+          </ul>
+        </div>
+
+        <!-- Sales -->
+        <div class="khaki-card p-5 rounded-xl">
+          <h3 class="font-bold text-black border-b border-[#D4CAB4] pb-2 mb-3"><i class="fas fa-chart-line mr-2 text-amber-900"></i>Sales & Operations</h3>
+          <ul class="text-xs space-y-2 text-gray-800 font-semibold">
+            <li>• Sales Coordinator</li>
+            <li>• Operations Assistant</li>
+            <li>• Business Support Staff</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== METRICS SECTION ==================== -->
+  <section class="py-12 bg-[#2D2A22] text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div>
+          <div class="text-2xl sm:text-3xl font-extrabold text-[#E6DCC8]">1,250+</div>
+          <div class="text-[11px] sm:text-xs text-gray-300 font-bold uppercase tracking-wider mt-1">Job Seekers Assisted</div>
+        </div>
+        <div>
+          <div class="text-2xl sm:text-3xl font-extrabold text-[#E6DCC8]">850+</div>
+          <div class="text-[11px] sm:text-xs text-gray-300 font-bold uppercase tracking-wider mt-1">CV Reviews Completed</div>
+        </div>
+        <div>
+          <div class="text-2xl sm:text-3xl font-extrabold text-[#E6DCC8]">420+</div>
+          <div class="text-[11px] sm:text-xs text-gray-300 font-bold uppercase tracking-wider mt-1">ATS CV Designs Delivered</div>
+        </div>
+        <div>
+          <div class="text-2xl sm:text-3xl font-extrabold text-[#E6DCC8]">310+</div>
+          <div class="text-[11px] sm:text-xs text-gray-300 font-bold uppercase tracking-wider mt-1">Employer Referrals Facilitated</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== UAE JOBS PAGE / HUB ==================== -->
+  <section id="uae-jobs" class="py-16 bg-[#FDFBF7]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="border-b border-[#E6DCC8] pb-4 mb-8 flex flex-col md:flex-row items-center justify-between text-center md:text-left gap-4">
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-black">UAE Job Opportunities</h2>
+          <p class="text-xs text-amber-900 font-bold uppercase tracking-widest mt-1">Curated Middle East Live Vacancies</p>
+        </div>
+        <!-- HIGH INTENSITY GOOGLE SHORTENED STREAM HUB LINK -->
+        <a href="PASTE_YOUR_SHORTENED_GOOGLE_JOBS_URL_HERE" target="_blank" class="bg-amber-900 hover:bg-black text-white text-xs font-bold px-5 py-2.5 rounded shadow transition">Launch Live UAE Job Stream <i class="fas fa-arrow-up-right-from-square ml-1 text-[10px]"></i></a>
+      </div>
+
+      <!-- SEARCH FILTERS SIMULATION -->
+      <div class="khaki-card p-4 rounded-xl mb-6 grid grid-cols-2 md:grid-cols-5 gap-3 text-xs font-bold text-gray-800">
+        <input type="text" placeholder="Keyword Search..." class="p-2.5 rounded border border-[#D4CAB4] bg-white text-black" disabled>
+        <select class="p-2.5 rounded border border-[#D4CAB4] bg-white text-gray-500" disabled><option>City (Dubai/Sharjah)</option></select>
+        <select class="p-2.5 rounded border border-[#D4CAB4] bg-white text-gray-500" disabled><option>Industry (Admin/CS)</option></select>
+        <select class="p-2.5 rounded border border-[#D4CAB4] bg-white text-gray-500" disabled><option>Experience Level</option></select>
+        <button class="col-span-2 md:col-span-1 bg-amber-900 text-white font-bold rounded p-2.5 transition opacity-80 cursor-not-allowed">Apply Filters</button>
+      </div>
+
+      <!-- JOB ENTRIES LIST -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- UAE Vacancy 1 -->
+        <div class="bg-white p-6 rounded-xl border border-[#E6DCC8] flex flex-col justify-between shadow-sm">
+          <div>
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="font-extrabold text-lg text-black">Customer Service Roles (Airport & Contact Centre)</h3>
+              <span class="text-[9px] bg-emerald-100 text-emerald-950 px-2 py-0.5 rounded border border-emerald-300 font-bold uppercase">Active</span>
+            </div>
+            <p class="text-xs text-amber-900 font-bold mb-3">Emirates Group — Dubai, UAE</p>
+            <p class="text-xs text-gray-600 leading-relaxed font-medium mb-4">
+              Openings across regional operations, dnata customer services, and contact coordination channels. Offers full competitive tax-free packages and airline processing benefits.
+            </p>
+          </div>
+          <div class="flex justify-between items-center pt-2 border-t border-gray-100">
+            <span class="text-[10px] text-gray-400 font-bold">Posted: Recently</span>
+            <a href="https://www.emiratesgroupcareers.com/search-and-apply/129" target="_blank" class="bg-gray-900 hover:bg-black text-white font-bold text-xs px-4 py-2 rounded transition shadow-sm">Apply Now</a>
+          </div>
+        </div>
+
+        <!-- UAE Vacancy 2 -->
+        <div class="bg-white p-6 rounded-xl border border-[#E6DCC8] flex flex-col justify-between shadow-sm">
+          <div>
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="font-extrabold text-lg text-black">Front Desk Guest Experience Executive</h3>
+              <span class="text-[9px] bg-amber-100 text-amber-950 px-2 py-0.5 rounded border border-amber-300 font-bold uppercase">Curated</span>
+            </div>
+            <p class="text-xs text-amber-900 font-bold mb-3">Commercial Entertainment Group — Dubai, UAE</p>
+            <p class="text-xs text-gray-600 leading-relaxed font-medium mb-4">
+              Oversight processing handling front desk ticketing queues, entry waiver database compliance logs, guest safety metrics tracking, and point-of-sale cash controls.
+            </p>
+          </div>
+          <div class="flex justify-between items-center pt-2 border-t border-gray-100">
+            <span class="text-[10px] text-gray-400 font-bold">Posted: 2 days ago</span>
+            <a href="https://www.linkedin.com/jobs" target="_blank" class="bg-gray-900 hover:bg-black text-white font-bold text-xs px-4 py-2 rounded transition shadow-sm">Apply Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PHILIPPINES JOBS PAGE ==================== -->
+  <section id="ph-jobs" class="py-16 bg-[#F4F0E6] border-t border-b border-[#D4CAB4]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="pb-4 mb-8 flex flex-col md:flex-row items-center justify-between text-center md:text-left gap-4">
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-black">Philippines Job Opportunities</h2>
+          <p class="text-xs text-amber-900 font-bold uppercase tracking-widest mt-1">BPO, Virtual Assistant, and Corporate Tracks</p>
+        </div>
+        <a href="PASTE_YOUR_SHORTENED_GOOGLE_JOBS_URL_HERE" target="_blank" class="bg-amber-900 hover:bg-black text-white text-xs font-bold px-5 py-2.5 rounded shadow transition">Launch Live PH Job Stream <i class="fas fa-arrow-up-right-from-square ml-1 text-[10px]"></i></a>
+      </div>
+
+      <!-- PH LISTINGS VIEW -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- PH 1 -->
+        <div class="bg-white p-5 rounded-xl border border-[#E6DCC8] shadow-sm flex flex-col justify-between">
+          <div>
+            <h3 class="font-extrabold text-base text-black mb-1">Customer Support Specialist (BPO)</h3>
+            <p class="text-xs text-amber-900 font-bold mb-2">Global Outsourcing Corp — Manila / Remote</p>
+            <p class="text-xs text-gray-600 font-medium mb-4">Handling omni-channel client ticketing processes, accounts resolution logs, and technical operations workflows.</p>
+          </div>
+          <a href="https://www.linkedin.com/jobs" target="_blank" class="block text-center bg-gray-900 hover:bg-black text-white font-bold text-xs py-2 rounded transition">Apply Position</a>
+        </div>
+
+        <!-- PH 2 -->
+        <div class="bg-white p-5 rounded-xl border border-[#E6DCC8] shadow-sm flex flex-col justify-between">
+          <div>
+            <h3 class="font-extrabold text-base text-black mb-1">Executive Virtual Assistant</h3>
+            <p class="text-xs text-amber-900 font-bold mb-2">Offshore Enterprise Solutions — Remote PH</p>
+            <p class="text-xs text-gray-600 font-medium mb-4">Calendar management, data scrubbing, administrative email dispatching, and high-priority meeting coordination infrastructure.</p>
+          </div>
+          <a href="https://www.linkedin.com/jobs" target="_blank" class="block text-center bg-gray-900 hover:bg-black text-white font-bold text-xs py-2 rounded transition">Apply Position</a>
+        </div>
+
+        <!-- PH 3 -->
+        <div class="bg-white p-5 rounded-xl border border-[#E6DCC8] shadow-sm flex flex-col justify-between">
+          <div>
+            <h3 class="font-extrabold text-base text-black mb-1">Talent Acquisition Sourcer</h3>
+            <p class="text-xs text-amber-900 font-bold mb-2">Prime Recruitment Partners — National Capital Reg</p>
+            <p class="text-xs text-gray-600 font-medium mb-4">Sourcing administrative, sales support, and operations candidates against active parameters using modern ATS workflows.</p>
+          </div>
+          <a href="https://www.linkedin.com/jobs" target="_blank" class="block text-center bg-gray-900 hover:bg-black text-white font-bold text-xs py-2 rounded transition">Apply Position</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FREE ATS CV REVIEW PAGE ==================== -->
+  <section id="cv-review" class="py-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-black">Free ATS Resume Review</h2>
+        <p class="text-xs text-gray-600 mt-2 font-medium">Submit your resume and receive a professional ATS review focused on formatting, keywords, readability, and recruiter expectations.</p>
         <div class="h-1 w-12 bg-amber-900 mx-auto mt-3 rounded-full"></div>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
         
-        <!-- SERVICE 1: FREE CV REVIEW BASE PIPELINE -->
+        <!-- RESUME REQUEST DIRECT SECURE EMAIL TRIGGER FORM -->
+        <form action="mailto:jerwinlumpay24@gmail.com" method="get" enctype="text/plain" class="lg:col-span-7 bg-white p-6 sm:p-8 rounded-2xl border border-[#E6DCC8] shadow-sm space-y-4 text-xs font-bold text-gray-800">
+          <input type="hidden" name="subject" value="Free ATS Resume Review Request">
+          
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="flex flex-col"><label class="mb-1">Full Name</label><input type="text" placeholder="John Doe" class="p-3 rounded border border-[#D4CAB4]" required></div>
+            <div class="flex flex-col"><label class="mb-1">Email Address</label><input type="email" placeholder="john@example.com" class="p-3 rounded border border-[#D4CAB4]" required></div>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="flex flex-col"><label class="mb-1">Mobile Number</label><input type="text" placeholder="+971 50 000 0000" class="p-3 rounded border border-[#D4CAB4]" required></div>
+            <div class="flex flex-col"><label class="mb-1">Current Location</label><input type="text" placeholder="Dubai, UAE" class="p-3 rounded border border-[#D4CAB4]" required></div>
+          </div>
+          <div class="flex flex-col"><label class="mb-1">Desired Position</label><input type="text" placeholder="Administrative / Customer Support" class="p-3 rounded border border-[#D4CAB4]" required></div>
+          
+          <div class="bg-[#F4F0E6] p-4 rounded-xl border border-dashed border-[#D4CAB4] text-center text-gray-700 font-medium">
+            <i class="fas fa-cloud-upload-alt text-2xl mb-1 text-amber-900"></i>
+            <p class="text-[11px] font-bold">CV Submission Action Protocol:</p>
+            <p class="text-[10px] text-gray-500 mt-0.5">Clicking the submit button below initializes your secure local client email. Attach your document securely to the generated email draft before sending it to JL for evaluation.</p>
+          </div>
+          
+          <button type="submit" class="w-full bg-amber-900 hover:bg-black text-white font-bold py-3.5 rounded-lg transition text-sm shadow">Request Free ATS Review</button>
+        </form>
+
+        <!-- DELIVERABLES ANALYSIS -->
+        <div class="lg:col-span-5 khaki-card p-6 sm:p-8 rounded-2xl border border-[#D4CAB4]">
+          <h3 class="font-extrabold text-black text-lg mb-4">What You Receive</h3>
+          <ul class="space-y-4 text-xs sm:text-sm text-gray-800 font-semibold">
+            <li class="flex items-start"><i class="fas fa-check text-amber-900 mt-1 mr-3 flex-shrink-0"></i> <span><strong>ATS Compatibility Assessment:</strong> Check if parsing robots can safely read your content fields.</span></li>
+            <li class="flex items-start"><i class="fas fa-check text-amber-900 mt-1 mr-3 flex-shrink-0"></i> <span><strong>Resume Structure Analysis:</strong> Evaluation of layout priorities and timeline visibility metrics.</span></li>
+            <li class="flex items-start"><i class="fas fa-check text-amber-900 mt-1 mr-3 flex-shrink-0"></i> <span><strong>Keyword Optimization Suggestions:</strong> Tailored vocabulary adjustments matching regional HR expectations.</span></li>
+            <li class="flex items-start"><i class="fas fa-check text-amber-900 mt-1 mr-3 flex-shrink-0"></i> <span><strong>Recruiter Feedback:</strong> Factual response assessments based on direct global talent sourcing operations.</span></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ATS CV DESIGN SERVICES PAGE (FIXED LINKS) ==================== -->
+  <section id="cv-services" class="py-16 bg-[#F4F0E6] border-t border-b border-[#D4CAB4]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-black">Professional ATS-Compliant Resume Design</h2>
+        <p class="text-xs text-gray-600 mt-2 font-medium">Transform your resume into a professional document optimized for modern applicant tracking systems and recruiter screening processes.</p>
+        <div class="h-1 w-12 bg-amber-900 mx-auto mt-3 rounded-full"></div>
+      </div>
+
+      <!-- SERVICE CARDS PACKAGES -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        
+        <!-- Basic ATS -->
         <div class="bg-white p-6 rounded-xl border border-[#E6DCC8] shadow-sm flex flex-col justify-between">
           <div>
-            <div class="flex items-center justify-between mb-4">
-              <span class="text-[10px] bg-amber-100 text-amber-950 font-bold px-2.5 py-1 rounded border border-amber-200 uppercase tracking-wide">Standard Queue</span>
-              <i class="fas fa-envelope-open-text text-gray-400"></i>
-            </div>
-            <h3 class="text-lg font-bold text-black mb-2">Direct CV Review with JL</h3>
-            <p class="text-xs text-gray-600 leading-relaxed mb-4">
-              Submit your document directly to my inbox for an initial structural layout check. Send your comprehensive CV and wait for an direct email reply containing critical structural feedback.
-            </p>
+            <h3 class="text-lg font-extrabold text-black mb-1">Basic ATS CV</h3>
+            <p class="text-xs text-gray-400 mb-4 font-semibold">Essential Structural Reformatting</p>
+            <ul class="text-xs space-y-2 text-gray-700 font-semibold mb-6">
+              <li><i class="fas fa-check text-amber-900 mr-2"></i> ATS Formatting Layout</li>
+              <li><i class="fas fa-check text-amber-900 mr-2"></i> Professional Grid Setup</li>
+              <li><i class="fas fa-check text-amber-900 mr-2"></i> Final Document PDF Delivery</li>
+            </ul>
           </div>
-          <a href="mailto:jerwinlumpay24@gmail.com?subject=CV%20Review%20Request%20-%20JL%20Talent%20Hub" class="block text-center text-xs bg-gray-900 hover:bg-black text-white font-bold py-3 rounded-lg transition shadow-sm">Send Your CV For Review</a>
+          <a href="https://wa.me/message/EHI3KKXLMSP2N1" target="_blank" class="block text-center text-xs bg-gray-900 hover:bg-black text-white font-bold py-2.5 rounded transition shadow-sm">Avail Basic Package</a>
         </div>
 
-        <!-- SERVICE 2: PAID ATS SERVICE (ADSTERRA MONETIZATION BACKED) -->
-        <div class="bg-white p-6 rounded-xl border-2 border-amber-900/30 shadow-sm flex flex-col justify-between relative">
-          <span class="absolute -top-2.5 right-4 text-[9px] bg-amber-900 text-white font-extrabold px-2.5 py-0.5 rounded shadow uppercase tracking-widest">Premium Allocation</span>
+        <!-- Professional ATS (MONETIZED CLICK THROUGH INTEGRATION HOOK) -->
+        <div class="bg-white p-6 rounded-xl border-2 border-amber-900/40 shadow flex flex-col justify-between relative">
+          <span class="absolute -top-2.5 right-4 text-[9px] bg-amber-900 text-white font-extrabold px-2.5 py-0.5 rounded shadow uppercase tracking-widest">Most Popular</span>
           <div>
-            <div class="flex items-center justify-between mb-4">
-              <span class="text-[10px] bg-[#E6DCC8] text-amber-950 font-bold px-2.5 py-1 rounded uppercase tracking-wide">Instant Premium</span>
-              <i class="fas fa-robot text-amber-800"></i>
-            </div>
-            <h3 class="text-lg font-bold text-black mb-2">Avail Paid ATS Friendly CV Services</h3>
-            <p class="text-xs text-gray-600 leading-relaxed mb-4">
-              Bypass basic waiting queues completely. Avail our comprehensive paid operational optimization tools designed to instantly format, test, and adapt file matrices against live electronic screening engines.
-            </p>
+            <h3 class="text-lg font-extrabold text-black mb-1">Professional ATS CV</h3>
+            <p class="text-xs text-amber-900 mb-4 font-bold">Complete Optimization Processing</p>
+            <ul class="text-xs space-y-2 text-gray-700 font-semibold mb-6">
+              <li><i class="fas fa-check text-amber-900 mr-2"></i> Core Advanced ATS Optimization</li>
+              <li><i class="fas fa-check text-amber-900 mr-2"></i> Strategic Keyword Enhancements</li>
+              <li><i class="fas fa-check text-amber-900 mr-2"></i> Modern Professional Layout Styling</li>
+              <li><i class="fas fa-check text-amber-900 mr-2"></i> Fully Editable Source File Included</li>
+            </ul>
           </div>
-          <!-- REPLACES PREVIOUS LINKVERTISE AD WALLS WITH CLEAN ADSTERRA ENGINE SMARTLINK -->
-          <a href="PASTE_YOUR_ADSTERRA_SMARTLINK_HERE" target="_blank" class="block text-center text-xs bg-amber-900 hover:bg-black text-white font-bold py-3 rounded-lg transition shadow-sm">Initialize Premium ATS Upgrade <i class="fas fa-magic ml-1 text-[10px]"></i></a>
+          <!-- REPLACES DEFECTIVE DEAD LINKS PREVENTING 404 BLOCKS -->
+          <a href="PASTE_YOUR_ADSTERRA_SMARTLINK_HERE" target="_blank" class="block text-center text-xs bg-amber-900 hover:bg-black text-white font-bold py-2.5 rounded transition shadow">Initialize Premium Engine <i class="fas fa-bolt ml-1 text-[9px]"></i></a>
         </div>
 
+        <!-- Executive ATS -->
+        <div class="bg-white p-6 rounded-xl border border-[#E6DCC8] shadow-sm flex flex-col justify-between">
+          <div>
+            <h3 class="text-lg font-extrabold text-black mb-1">Executive ATS CV</h3>
+            <p class="text-xs text-gray-400 mb-4 font-semibold">Complete Strategic Career Branding</p>
+            <ul class="text-xs space-y-2 text-gray-700 font-semibold mb-6">
+              <li><i class="fas fa-check text-amber-900 mr-2"></i> Executive Resume Engineering</li>
+              <li><i class="fas fa-check text-amber-900 mr-2"></i> LinkedIn Profile Matrix Tuning</li>
+              <li><i class="fas fa-check text-amber-900 mr-2"></i> Custom Targeted Cover Letter</li>
+              <li><i class="fas fa-check text-amber-900 mr-2"></i> Priority Operations Delivery</li>
+            </ul>
+          </div>
+          <a href="https://wa.me/message/EHI3KKXLMSP2N1" target="_blank" class="block text-center text-xs bg-gray-900 hover:bg-black text-white font-bold py-2.5 rounded transition shadow-sm">Avail Executive Suite</a>
+        </div>
+
+      </div>
+
+      <!-- ADDITIONAL CLOSURES -->
+      <div class="bg-white p-6 rounded-xl border border-[#E6DCC8] shadow-sm text-center">
+        <h4 class="font-bold text-black mb-2 text-sm uppercase tracking-wider">Additional Available Services</h4>
+        <p class="text-xs text-gray-600 font-medium mb-4">LinkedIn Profile Optimization | Cover Letter Writing | Resume Updating | Career Branding Consultation</p>
+        <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+          <a href="#contact" class="w-full sm:w-auto bg-amber-900 hover:bg-black text-white font-bold text-xs px-6 py-2.5 rounded shadow transition">Request a Quote</a>
+          <a href="https://wa.me/message/EHI3KKXLMSP2N1" target="_blank" class="w-full sm:w-auto bg-[#25D366] hover:bg-[#20BA5A] text-white font-bold text-xs px-6 py-2.5 rounded shadow transition"><i class="fab fa-whatsapp mr-2"></i>Contact via WhatsApp</a>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- JOB REFERRAL SECTION -->
-  <section id="referrals" class="py-20 md:py-28 border-t border-[#E6DCC8]">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-12 pb-4 border-b border-[#E6DCC8]">
-        <div class="text-center sm:text-left">
-          <span class="text-xs font-bold uppercase tracking-widest text-amber-800">Verified Submissions</span>
-          <h2 class="text-3xl font-extrabold text-black mt-1">Active Corporate Referrals</h2>
-        </div>
-        <!-- HIGHWAY TO GOOGLE FILTER JOBS DATA -->
-        <a href="PASTE_YOUR_SHORTENED_GOOGLE_JOBS_URL_HERE" target="_blank" class="mt-4 sm:mt-0 inline-flex items-center text-sm font-bold text-amber-900 hover:text-black transition">
-          Launch Live Dubai Job Stream <i class="fas fa-arrow-up-right-from-square ml-2 text-xs"></i>
-        </a>
+  <!-- ==================== EMPLOYERS PAGE ==================== -->
+  <section id="employers" class="py-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-black">Looking for Qualified Candidates?</h2>
+        <p class="text-xs text-gray-600 mt-2 font-medium">Partner with Jobs by Jerwin Lumpay to access pre-screened talent for administrative, customer service, call center, front office, and business support positions.</p>
+        <div class="h-1 w-12 bg-amber-900 mx-auto mt-3 rounded-full"></div>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        
-        <!-- REFERRAL CARD 1 -->
-        <div class="khaki-card p-6 rounded-xl border border-[#E6DCC8] flex flex-col justify-between">
-          <div>
-            <div class="flex items-center justify-between mb-3">
-              <span class="text-[10px] bg-emerald-100 text-emerald-950 border border-emerald-300 font-bold px-2 py-0.5 rounded uppercase">Verified Channel</span>
-              <i class="fas fa-plane text-gray-500 text-sm"></i>
-            </div>
-            <h3 class="text-lg font-bold text-black mb-1">Aviation & Airport Contact Centre Roles</h3>
-            <p class="text-xs text-amber-900 font-semibold mb-3">Emirates Group Careers — UAE</p>
-            <p class="text-xs text-gray-700 leading-relaxed mb-4">
-              Direct submission pathways targeted for premium ground logistics networks, check-in desks, customer care stations, and administrative aviation groups.
-            </p>
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <!-- SERVICES PROVIDED -->
+        <div class="lg:col-span-5 space-y-4">
+          <div class="khaki-card p-5 rounded-xl">
+            <h3 class="font-extrabold text-black text-base mb-1"><i class="fas fa-handshake mr-2 text-amber-900"></i>Candidate Referral Services</h3>
+            <p class="text-xs text-gray-700 leading-relaxed font-semibold">Qualified candidate recommendations mapped exactly to your processing metrics and job requirements.</p>
           </div>
-          <a href="https://www.emiratesgroupcareers.com/search-and-apply/129" target="_blank" class="block text-center text-xs bg-white hover:bg-gray-100 text-black border border-[#E6DCC8] font-bold py-2.5 rounded transition">Access Submission Hub</a>
+          <div class="khaki-card p-5 rounded-xl">
+            <h3 class="font-extrabold text-black text-base mb-1"><i class="fas fa-filter mr-2 text-amber-900"></i>Talent Acquisition Support</h3>
+            <p class="text-xs text-gray-700 leading-relaxed font-semibold">Sourcing, screen evaluation channels, framework vetting, and operational verification pipelines.</p>
+          </div>
+          <div class="p-4 bg-white rounded-xl border border-[#E6DCC8] text-xs font-semibold text-gray-800 space-y-1">
+            <p class="text-amber-950 font-bold uppercase tracking-wider mb-2"><i class="fas fa-envelope mr-1"></i>Direct Recruitment Support</p>
+            <p>Email: <a href="mailto:support@jerwinlumpay.com" class="hover:underline text-amber-900">support@jerwinlumpay.com</a></p>
+            <p>WhatsApp: <a href="https://wa.me/message/EHI3KKXLMSP2N1" target="_blank" class="hover:underline text-amber-900">Click to Open Secure Chat</a></p>
+          </div>
         </div>
 
-        <!-- REFERRAL CARD 2 -->
-        <div class="khaki-card p-6 rounded-xl border border-[#E6DCC8] flex flex-col justify-between">
-          <div>
-            <div class="flex items-center justify-between mb-3">
-              <span class="text-[10px] bg-blue-100 text-blue-950 border border-blue-300 font-bold px-2 py-0.5 rounded uppercase">Active Tracking</span>
-              <i class="fas fa-users-gear text-gray-500 text-sm"></i>
-            </div>
-            <h3 class="text-lg font-bold text-black mb-1">Customer Experience & Service Supervisors</h3>
-            <p class="text-xs text-amber-900 font-semibold mb-3">Commercial Facility Operations Sector</p>
-            <p class="text-xs text-gray-700 leading-relaxed mb-4">
-              Immediate vacancies tracking for client relations specialists, team leads, front-desk administrators, and commercial compliance processing operators.
-            </p>
+        <!-- EMPLOYER FORM CONTACT INBOX PIPELINE -->
+        <form action="mailto:support@jerwinlumpay.com" method="get" enctype="text/plain" class="lg:col-span-7 bg-white p-6 rounded-2xl border border-[#E6DCC8] shadow-sm space-y-4 text-xs font-bold text-gray-800">
+          <input type="hidden" name="subject" value="Employer Recruitment Referral Inquiry">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="flex flex-col"><label class="mb-1">Company Name</label><input type="text" placeholder="Enterprise Corp" class="p-3 rounded border border-[#D4CAB4]" required></div>
+            <div class="flex flex-col"><label class="mb-1">Contact Person</label><input type="text" placeholder="Hiring Manager" class="p-3 rounded border border-[#D4CAB4]" required></div>
           </div>
-          <a href="https://www.linkedin.com/jobs" target="_blank" class="block text-center text-xs bg-white hover:bg-gray-100 text-black border border-[#E6DCC8] font-bold py-2.5 rounded transition">Search Live Vacancies</a>
-        </div>
-
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="flex flex-col"><label class="mb-1">Email Address</label><input type="email" placeholder="hr@company.com" class="p-3 rounded border border-[#D4CAB4]" required></div>
+            <div class="flex flex-col"><label class="mb-1">Phone Number</label><input type="text" placeholder="+971..." class="p-3 rounded border border-[#D4CAB4]" required></div>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="flex flex-col"><label class="mb-1">Position Hiring For</label><input type="text" placeholder="Customer Support Lead" class="p-3 rounded border border-[#D4CAB4]" required></div>
+            <div class="flex flex-col"><label class="mb-1">Number of Vacancies</label><input type="number" placeholder="2" class="p-3 rounded border border-[#D4CAB4]" required></div>
+          </div>
+          <div class="flex flex-col"><label class="mb-1">Message Requirements</label><textarea rows="3" placeholder="Outline specific candidate requirements here..." class="p-3 rounded border border-[#D4CAB4]" required></textarea></div>
+          <button type="submit" class="w-full bg-amber-900 hover:bg-black text-white font-bold py-3.5 rounded-lg text-sm shadow">Request Candidate Referrals</button>
+        </form>
       </div>
     </div>
   </section>
 
-  <!-- PROFESSIONAL INTEGRITY FOOTER -->
+  <!-- ==================== CAREER RESOURCES PAGE ==================== -->
+  <section id="resources" class="py-16 bg-[#F4F0E6] border-t border-b border-[#D4CAB4]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-black">Career Resources & Blog</h2>
+        <div class="h-1 w-12 bg-amber-900 mx-auto mt-3 rounded-full"></div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-xs font-semibold text-gray-800">
+        <div class="bg-white p-5 rounded-xl border border-[#E6DCC8] shadow-sm">
+          <span class="text-[9px] bg-amber-100 text-amber-950 font-bold px-2 py-0.5 rounded uppercase tracking-wider mb-2 inline-block">UAE Focus</span>
+          <h3 class="font-extrabold text-sm text-black mb-1">UAE Job Search Strategy Guide</h3>
+          <p class="text-gray-600 leading-relaxed font-medium">Navigating direct corporate recruitment processing channels effectively in Dubai and Abu Dhabi hubs.</p>
+        </div>
+        <div class="bg-white p-5 rounded-xl border border-[#E6DCC8] shadow-sm">
+          <span class="text-[9px] bg-amber-100 text-amber-950 font-bold px-2 py-0.5 rounded uppercase tracking-wider mb-2 inline-block">ATS Standards</span>
+          <h3 class="font-extrabold text-sm text-black mb-1">ATS Resume Layout Best Practices</h3>
+          <p class="text-gray-600 leading-relaxed font-medium">How to structure clear keyword parsing matrices so robots approve your records instantly.</p>
+        </div>
+        <div class="bg-white p-5 rounded-xl border border-[#E6DCC8] shadow-sm">
+          <span class="text-[9px] bg-amber-100 text-amber-950 font-bold px-2 py-0.5 rounded uppercase tracking-wider mb-2 inline-block">Interview Prep</span>
+          <h3 class="font-extrabold text-sm text-black mb-1">Operations & Admin Interview Prep</h3>
+          <p class="text-gray-600 leading-relaxed font-medium">Mastering operational responses, compliance tracking loops, and database security metrics evaluations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== MAIN ABOUT PAGE ==================== -->
+  <section id="about" class="py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="text-center max-w-2xl mx-auto mb-8">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-black">About Jerwin Lumpay</h2>
+        <div class="h-1 w-12 bg-amber-900 mx-auto mt-3 rounded-full"></div>
+      </div>
+      <p class="text-sm sm:text-base text-gray-800 font-medium leading-relaxed max-w-3xl mx-auto mb-8">
+        Professional Administrative and Executive Assistant providing targeted career support, ATS resume services, job opportunity sharing, and recruitment referral assistance. My platform bridges structural execution lines across multi-national networks to deliver sustainable workforce deployment.
+      </p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-left">
+        <div class="khaki-card p-6 rounded-xl">
+          <h4 class="font-extrabold text-amber-950 mb-2 uppercase tracking-wider text-sm"><i class="fas fa-bullseye mr-2"></i>Our Mission</h4>
+          <p class="text-xs text-gray-700 font-semibold leading-relaxed">To help job seekers secure meaningful employment opportunities and support corporate employers in seamlessly connecting with qualified, pre-screened talent.</p>
+        </div>
+        <div class="khaki-card p-6 rounded-xl">
+          <h4 class="font-extrabold text-amber-950 mb-2 uppercase tracking-wider text-sm"><i class="fas fa-eye mr-2"></i>Our Vision</h4>
+          <p class="text-xs text-gray-700 font-semibold leading-relaxed">To become a globally trusted career growth and recruitment pipeline platform serving professional sectors across the UAE and the Philippines.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CONTACT PAGE ==================== -->
+  <section id="contact" class="py-16 bg-[#F4F0E6] border-t border-black">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-black">Get in Touch</h2>
+        <p class="text-xs text-gray-700 font-semibold mt-2">Need assistance with job opportunities, ATS resume reviews, professional resume design, or recruitment referrals? Contact us today.</p>
+        <div class="h-1 w-12 bg-amber-900 mx-auto mt-3 rounded-full"></div>
+      </div>
+
+      <!-- MAIN SECURE OUTGOING EMAIL CONTACT ROUTER FORM -->
+      <form action="mailto:support@jerwinlumpay.com" method="get" enctype="text/plain" class="bg-white p-6 sm:p-8 rounded-2xl border border-[#E6DCC8] shadow-sm space-y-4 text-xs font-bold text-gray-800">
+        <input type="hidden" name="subject" value="General Portal Inquiry">
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div class="flex flex-col"><label class="mb-1">Name</label><input type="text" placeholder="Your Name" class="p-3 rounded border border-[#D4CAB4]" required></div>
+          <div class="flex flex-col"><label class="mb-1">Email Address</label><input type="email" placeholder="email@address.com" class="p-3 rounded border border-[#D4CAB4]" required></div>
+          <div class="flex flex-col"><label class="mb-1">Mobile Number</label><input type="text" placeholder="Phone Number" class="p-3 rounded border border-[#D4CAB4]" required></div>
+        </div>
+        <div class="flex flex-col"><label class="mb-1">Subject</label><input type="text" name="subject_line" placeholder="How can we help you?" class="p-3 rounded border border-[#D4CAB4]" required></div>
+        <div class="flex flex-col"><label class="mb-1">Message Content</label><textarea rows="4" placeholder="Type your detailed message requirements here..." class="p-3 rounded border border-[#D4CAB4]" required></textarea></div>
+        <button type="submit" class="w-full bg-amber-900 hover:bg-black text-white font-bold py-3.5 rounded-lg text-sm shadow transition">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ==================== PLATFORM FOOTER ==================== -->
   <footer class="bg-[#2D2A22] text-[#E6DCC8] py-12 text-center text-xs border-t border-black">
     <div class="max-w-7xl mx-auto px-4 space-y-3">
-      <p class="text-white font-bold tracking-wide">© 2026 JERWIN L. | CORPORATE OPERATIONAL HUB</p>
-      <p class="max-w-xl mx-auto leading-relaxed text-[#D4CAB4] px-2">
-        A professional resource vector engineered to refine data architecture structures and support organizational placement vectors across active global customer industries.
+      <p class="text-white font-bold tracking-wider">© 2026 JOBS BY JERWIN LUMPAY | ALL RIGHTS RESERVED</p>
+      <p class="max-w-xl mx-auto leading-relaxed text-[#D4CAB4] px-4 font-medium">
+        Connecting Talent with Opportunity. Trusted career engineering frameworks mapping dynamic placements across primary administrative and regional customer industries.
       </p>
     </div>
   </footer>
 
-  <!-- MOBILE INTERFACE TOGGLE INTERACTIVE LOGIC -->
+  <!-- ==================== JAVASCRIPT LOGIC ==================== -->
   <script>
     const btn = document.getElementById('mobile-menu-btn');
     const menu = document.getElementById('mobile-menu');
     
+    // Toggle menu dropdown visibility
     btn.addEventListener('click', () => {
       menu.classList.toggle('hidden');
     });
 
-    // Auto-close menu when clicking links on mobile devices
+    // Auto-collapse mobile tray when navigation links are chosen
     document.querySelectorAll('#mobile-menu a').forEach(link => {
       link.addEventListener('click', () => {
         menu.classList.add('hidden');
