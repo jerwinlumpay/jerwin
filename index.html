@@ -1,553 +1,276 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jerwin Lumpay - Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght=300;400;500;600;700;800&display=swap');
-        
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #0f172a;
-            color: #f8fafc;
-            scroll-behavior: smooth;
-        }
-
-        .glow-card {
-            position: relative;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            background: rgba(30, 41, 59, 0.5);
-        }
-
-        .glow-card:hover {
-            transform: translateY(-5px);
-            border-color: rgba(99, 102, 241, 0.4);
-            box-shadow: 0 0 30px rgba(99, 102, 241, 0.25);
-            background: rgba(30, 41, 59, 0.8);
-        }
-
-        .gradient-text {
-            background: linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #ec4899 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        @keyframes infiniteScroll {
-            from { transform: translateX(0); }
-            to { transform: translateX(-50%); }
-        }
-
-        .animate-marquee-container {
-            display: flex;
-            width: max-content;
-            animation: infiniteScroll 45s linear infinite;
-        }
-
-        .animate-marquee-container:hover {
-            animation-play-state: paused;
-        }
-        
-        .mobile-menu-open {
-            transform: translateX(0%);
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jerwin Lumpay - Professional Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #0B0F19; }
+    .glass-panel { background: rgba(17, 24, 39, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.05); }
+    .text-gradient { background: linear-gradient(135deg, #6366F1 0%, #A855F7 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .border-gradient { border-image: linear-gradient(135deg, #6366F1 0%, #A855F7 100__) 1; }
+    .glow-effect { box-shadow: 0 0 30px rgba(99, 102, 241, 0.15); }
+    html { scroll-behavior: smooth; }
+  </style>
 </head>
-<body class="overflow-x-hidden antialiased">
+<body class="text-gray-300 selection:bg-indigo-500 selection:text-white">
 
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-[#0f172a]/80 backdrop-blur-md border-b border-slate-800">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <span class="text-xl font-bold tracking-wider uppercase gradient-text">Jerwin Lumpay</span>
-            
-            <div class="hidden lg:flex space-x-2 text-sm font-medium text-slate-400">
-                <a href="#home" class="px-3 py-2 rounded-lg hover:text-white hover:bg-indigo-500/10 hover:shadow-[0_0_15px_rgba(99,102,241,0.2)] transition duration-300">Home</a>
-                <a href="#competencies" class="px-3 py-2 rounded-lg hover:text-white hover:bg-indigo-500/10 hover:shadow-[0_0_15px_rgba(99,102,241,0.2)] transition duration-300">Competencies</a>
-                <a href="#experience" class="px-3 py-2 rounded-lg hover:text-white hover:bg-indigo-500/10 hover:shadow-[0_0_15px_rgba(99,102,241,0.2)] transition duration-300">Experience</a>
-                <a href="#education" class="px-3 py-2 rounded-lg hover:text-white hover:bg-indigo-500/10 hover:shadow-[0_0_15px_rgba(99,102,241,0.2)] transition duration-300">Education</a>
-                <a href="#credentials-gallery" class="px-3 py-2 rounded-lg hover:text-white hover:bg-indigo-500/10 hover:shadow-[0_0_15px_rgba(99,102,241,0.2)] transition duration-300">Certificates</a>
-                <a href="#contact" class="px-3 py-2 rounded-lg hover:text-white hover:bg-indigo-500/10 hover:shadow-[0_0_15px_rgba(99,102,241,0.2)] transition duration-300">Contact</a>
-                <a href="CV Jerwin Lumpay 1Pager.pdf" download class="px-3 py-2 rounded-lg text-indigo-400 hover:text-indigo-300 hover:bg-indigo-500/10 transition duration-300"><i class="fa-solid fa-download mr-1"></i> CV</a>
-            </div>
-            
-            <div class="hidden lg:block">
-                <a href="#contact" class="px-5 py-2.5 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 text-sm font-semibold hover:opacity-90 transition shadow-lg shadow-indigo-500/20">Contact Me</a>
-            </div>
-
-            <button id="mobile-menu-toggle" class="lg:hidden p-2 text-slate-400 hover:text-white focus:outline-none z-50">
-                <i class="fa-solid fa-bars text-2xl" id="menu-icon"></i>
-            </button>
+  <!-- NAVIGATION BAR -->
+  <nav class="fixed top-0 left-0 w-full z-50 glass-panel border-b border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <div class="flex-shrink-0">
+          <span class="text-xl font-bold text-white tracking-wider">JERWIN<span class="text-indigo-500">.</span>LUMPAY</span>
         </div>
-    </nav>
-
-    <div id="mobile-menu" class="fixed inset-0 z-40 bg-[#0f172a]/95 backdrop-blur-lg transform translate-x-full transition-transform duration-300 ease-in-out lg:hidden flex flex-col justify-center items-center space-y-6 text-xl font-medium">
-        <a href="#home" class="text-slate-300 hover:text-indigo-400 transition" onclick="toggleMenu()">Home</a>
-        <a href="#competencies" class="text-slate-300 hover:text-indigo-400 transition" onclick="toggleMenu()">Competencies</a>
-        <a href="#experience" class="text-slate-300 hover:text-indigo-400 transition" onclick="toggleMenu()">Experience</a>
-        <a href="#education" class="text-slate-300 hover:text-indigo-400 transition" onclick="toggleMenu()">Education</a>
-        <a href="#credentials-gallery" class="text-slate-300 hover:text-indigo-400 transition" onclick="toggleMenu()">Certificates</a>
-        <a href="#contact" class="text-slate-300 hover:text-indigo-400 transition" onclick="toggleMenu()">Contact</a>
-        <a href="CV Jerwin Lumpay 1Pager.pdf" download class="text-indigo-400 hover:text-indigo-300 transition" onclick="toggleMenu()"><i class="fa-solid fa-download mr-1"></i> Download CV</a>
-        <a href="#contact" class="px-6 py-3 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 text-sm font-semibold text-white shadow-lg shadow-indigo-500/20" onclick="toggleMenu()">Contact Me</a>
+        <div class="hidden md:block">
+          <div class="ml-10 flex items-baseline space-x-4">
+            <a href="#home" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition">Home</a>
+            <a href="#experience" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition">Experience</a>
+            <a href="#certifications" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition">Certifications</a>
+            <a href="#skills" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition">Skills</a>
+            <!-- MONETIZED LINK TRIGGER 1 (CV Shortener) -->
+            <a href="YOUR_TRACKING_URL" target="_blank" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-md text-sm font-medium transition glow-effect">Download CV <i class="fas fa-download ml-1"></i></a>
+          </div>
+        </div>
+        <div class="md:hidden">
+          <button id="mobile-menu-btn" class="text-gray-400 hover:text-white focus:outline-none">
+            <i class="fas fa-bars text-xl"></i>
+          </button>
+        </div>
+      </div>
     </div>
+    
+    <!-- MOBILE MENU -->
+    <div id="mobile-menu" class="hidden md:hidden glass-panel border-b border-gray-800 px-2 pt-2 pb-3 space-y-1 sm:px-3">
+      <a href="#home" class="text-gray-300 block px-3 py-2 rounded-md text-base font-medium">Home</a>
+      <a href="#experience" class="text-gray-300 block px-3 py-2 rounded-md text-base font-medium">Experience</a>
+      <a href="#certifications" class="text-gray-300 block px-3 py-2 rounded-md text-base font-medium">Certifications</a>
+      <a href="#skills" class="text-gray-300 block px-3 py-2 rounded-md text-base font-medium">Skills</a>
+      <!-- MONETIZED LINK TRIGGER 2 (CV Shortener Mobile) -->
+      <a href="YOUR_TRACKING_URL" target="_blank" class="bg-indigo-600 text-white block px-3 py-2 rounded-md text-base font-medium text-center">Download CV <i class="fas fa-download ml-1"></i></a>
+    </div>
+  </nav>
 
-    <section id="home" class="min-h-screen pt-28 flex items-center justify-center relative px-6 max-w-7xl mx-auto">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center w-full">
-            
-            <div class="lg:col-span-7 space-y-6 text-center lg:text-left order-2 lg:order-1">
-                <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight">
-                    Hi, I'm <span class="gradient-text">Jerwin Lumpay</span>
-                </h1>
-                <p class="text-lg sm:text-xl font-medium text-slate-400">
-                    Office Administration | Customer Experience | Operations
-                </p>
-                <p class="text-slate-400 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                    Results-driven Customer Service professional with 8+ years of experience in front desk, call center, and administrative operations. Skilled in handling high-volume customer inquiries, POS/cashiering, KYC compliance, and accurate handling of PII/SPI data. Proven track record in achieving 85% CSAT, 80% FCR, and generating $80K+ in sales while consistently meeting service KPIs.
-                </p>
-                <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 text-sm text-slate-400 pt-2">
-                    <span class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-indigo-400"></i> Dubai, UAE</span>
-                    <span class="hidden sm:inline text-slate-600">|</span>
-                    <span class="flex items-center gap-2"><i class="fa-solid fa-envelope text-indigo-400"></i> jerwinlumpay@outlook.com</span>
-                    <span class="hidden sm:inline text-slate-600">|</span>
-                    <span class="flex items-center gap-2"><i class="fa-solid fa-phone text-indigo-400"></i> +971544609927</span>
-                </div>
-                <div class="pt-4 flex flex-wrap justify-center lg:justify-start gap-4">
-                    <a href="#experience" class="px-6 py-3.5 rounded-xl bg-slate-800 hover:bg-slate-700 font-medium transition border border-slate-700 flex items-center gap-2">
-                        View My Work <i class="fa-solid fa-arrow-right text-xs"></i>
-                    </a>
-                    <a href="CV Jerwin Lumpay 1Pager.pdf" download class="px-6 py-3.5 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 font-medium transition shadow-lg shadow-indigo-600/20 flex items-center gap-2">
-                        <i class="fa-solid fa-file-arrow-down"></i> Download CV
-                    </a>
-                </div>
-            </div>
-
-            <div class="lg:col-span-5 flex justify-center order-1 lg:order-2">
-                <div class="relative w-72 sm:w-96 aspect-[1/2] rounded-3xl overflow-hidden bg-gradient-to-b from-slate-800 to-slate-900 border border-slate-700/50 shadow-2xl group">
-                    <div class="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-transparent to-transparent opacity-40 z-10"></div>
-                    <img src="Jerwin L Whole Body Photo.png" alt="Jerwin Lumpay Whole Body Portrait" class="w-full h-full object-cover object-top scale-105 group-hover:scale-100 transition-transform duration-700">
-                </div>
-            </div>
-
+  <!-- HERO SECTION -->
+  <section id="home" class="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden flex items-center min-h-screen">
+    <div class="absolute inset-0 z-0">
+      <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-indigo-600/10 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-600/10 rounded-full blur-3xl"></div>
+    </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+        <div class="md:col-span-7 space-y-6 text-center md:text-left">
+          <div class="inline-flex items-center space-x-2 bg-indigo-950/50 border border-indigo-500/30 px-3 py-1 rounded-full text-xs font-semibold text-indigo-400 tracking-wide uppercase">
+            <span class="flex h-2 w-2 relative">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
+            </span>
+            <span>Immediate Availability (Dubai, UAE)</span>
+          </div>
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-none">
+            Hi, I'm <span class="text-gradient">Jerwin Lumpay</span>
+          </h1>
+          <p class="text-xl sm:text-2xl font-medium text-gray-400">
+            Customer Service Operations & Compliance Lead
+          </p>
+          <p class="text-base sm:text-lg text-gray-400 max-w-2xl mx-auto md:mx-0 leading-relaxed">
+            Results-driven Operations Specialist with 10+ years of expertise spanning Back-End Control Centers, Customer Service Supervision, Compliance (KYC/I-9), Data Security (ISO 27001 Aligned), Procurement Management, and Team Leadership. Proven track record in streamlining organizational workflows and securing data integrity across global and local operations.
+          </p>
+          <div class="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 pt-4">
+            <!-- MONETIZED LINK TRIGGER 3 (CPA Lead Routing Hub) -->
+            <a href="YOUR_TRACKING_URL" target="_blank" class="w-full sm:w-auto bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-3 rounded-lg font-semibold text-center transition tracking-wide glow-effect">View My Work <i class="fas fa-arrow-right ml-2"></i></a>
+            <!-- MONETIZED LINK TRIGGER 4 (CV Shortener Hero) -->
+            <a href="YOUR_TRACKING_URL" target="_blank" class="w-full sm:w-auto border border-gray-700 hover:border-gray-500 hover:bg-gray-900/50 text-white px-8 py-3 rounded-lg font-semibold text-center transition tracking-wide">Download CV <i class="fas fa-download ml-2"></i></a>
+          </div>
         </div>
-    </section>
-
-    <section id="competencies" class="py-24 bg-[#0b0f19] border-y border-slate-900 px-6">
-        <div class="max-w-7xl mx-auto space-y-16">
-            <div class="text-center space-y-4">
-                <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">Core <span class="gradient-text">Competencies</span></h2>
+        <div class="md:col-span-5 flex justify-center">
+          <div class="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96">
+            <div class="absolute inset-0 bg-gradient-to-tr from-indigo-500 to-purple-500 rounded-2xl transform rotate-6 opacity-20 animate-pulse"></div>
+            <div class="absolute inset-0 glass-panel rounded-2xl border border-gray-800 flex items-center justify-center overflow-hidden shadow-2xl">
+              <i class="fas fa-user-shield text-7xl lg:text-8xl text-indigo-500/40"></i>
             </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                
-                <div class="glow-card p-8 rounded-2xl space-y-4">
-                    <div class="w-12 h-12 rounded-xl bg-indigo-500/10 flex items-center justify-center text-indigo-400 text-xl font-bold">
-                        <i class="fa-solid fa-headset"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white">Customer Experience & Call Center Operations</h3>
-                    <p class="text-sm text-slate-400 leading-relaxed">
-                        Expertise in high-volume multichannel queues, optimizing customer experiences, and executing precise resolution frameworks while maintaining key service level targets.
-                    </p>
-                    <div class="grid grid-cols-2 gap-3 pt-2 text-xs">
-                        <div class="bg-slate-900/60 p-3 rounded-lg border border-slate-800"><span class="text-indigo-400 font-bold block text-sm">85%</span> Call Center CSAT</div>
-                        <div class="bg-slate-900/60 p-3 rounded-lg border border-slate-800"><span class="text-indigo-400 font-bold block text-sm">7 Minutes</span> Target AHT</div>
-                        <div class="bg-slate-900/60 p-3 rounded-lg border border-slate-800"><span class="text-indigo-400 font-bold block text-sm">80%</span> FCR Target Achievement</div>
-                        <div class="bg-slate-900/60 p-3 rounded-lg border border-slate-800"><span class="text-indigo-400 font-bold block text-sm">80%</span> Reduced Escalation Log</div>
-                    </div>
-                </div>
-
-                <div class="glow-card p-8 rounded-2xl space-y-4">
-                    <div class="w-12 h-12 rounded-xl bg-purple-500/10 flex items-center justify-center text-purple-400 text-xl font-bold">
-                        <i class="fa-solid fa-shield-halved"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white">Finance KYC & Compliance Regulations</h3>
-                    <p class="text-sm text-slate-400 leading-relaxed">
-                        Strict identification compliance processing across personal data regulatory structures, identity validation frameworks, and security verification standards.
-                    </p>
-                    <div class="grid grid-cols-2 gap-3 pt-2 text-xs">
-                        <div class="bg-slate-900/60 p-3 rounded-lg border border-slate-800"><span class="text-purple-400 font-bold block text-sm">100% Compliant</span> US Form I-9 & E-Verify</div>
-                        <div class="bg-slate-900/60 p-3 rounded-lg border border-slate-800"><span class="text-purple-400 font-bold block text-sm">Secure Management</span> SPI and PII Handling</div>
-                        <div class="bg-slate-900/60 p-3 rounded-lg border border-slate-800"><span class="text-purple-400 font-bold block text-sm">ISO Certified</span> 9001 / 27001 Alignment</div>
-                        <div class="bg-slate-900/60 p-3 rounded-lg border border-slate-800"><span class="text-purple-400 font-bold block text-sm">Mitigation Control</span> Finance KYC Standards</div>
-                    </div>
-                </div>
-
-                <div class="glow-card p-8 rounded-2xl space-y-4">
-                    <div class="w-12 h-12 rounded-xl bg-pink-500/10 flex items-center justify-center text-pink-400 text-xl font-bold">
-                        <i class="fa-solid fa-folder-tree"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white">Document Control & File Management</h3>
-                    <p class="text-sm text-slate-400 leading-relaxed">
-                        Comprehensive administration over corporate records management architecture, data tracking models, and cross-departmental operations logging files.
-                    </p>
-                    <div class="grid grid-cols-2 gap-3 pt-2 text-xs">
-                        <div class="bg-slate-900/60 p-3 rounded-lg border border-slate-800"><span class="text-pink-400 font-bold block text-sm">&lt; 24 Hours</span> Strict SLA Targets</div>
-                        <div class="bg-slate-900/60 p-3 rounded-lg border border-slate-800"><span class="text-pink-400 font-bold block text-sm">Systematized</span> Document Control Systems</div>
-                        <div class="bg-slate-900/60 p-3 rounded-lg border border-slate-800"><span class="text-pink-400 font-bold block text-sm">Structured Matrix</span> File Management Models</div>
-                        <div class="bg-slate-900/60 p-3 rounded-lg border border-slate-800"><span class="text-pink-400 font-bold block text-sm">90% Reduction</span> Out-of-Compliance Cases</div>
-                    </div>
-                </div>
-
-                <div class="glow-card p-8 rounded-2xl space-y-4">
-                    <div class="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-400 text-xl font-bold">
-                        <i class="fa-solid fa-chart-line"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white">Team Performance & Sales Strategy</h3>
-                    <p class="text-sm text-slate-400 leading-relaxed">
-                        Sustained management over baseline metrics, team performance coaching targets, and product feature recommendation upsell matrices.
-                    </p>
-                    <div class="grid grid-cols-2 gap-3 pt-2 text-xs">
-                        <div class="bg-slate-900/60 p-3 rounded-lg border border-slate-800"><span class="text-emerald-400 font-bold block text-sm">No Less Than 85%</span> Team Occupancy Metrics</div>
-                        <div class="bg-slate-900/60 p-3 rounded-lg border border-slate-800"><span class="text-emerald-400 font-bold block text-sm">Maintain 90%</span> QA Standards Score</div>
-                        <div class="bg-slate-900/60 p-3 rounded-lg border border-slate-800"><span class="text-emerald-400 font-bold block text-sm">90% Avg Daily</span> Team Attendance Records</div>
-                        <div class="bg-slate-900/60 p-3 rounded-lg border border-slate-800"><span class="text-emerald-400 font-bold block text-sm">$10K / $20K Mo.</span> Upgrade / New Line Sales</div>
-                    </div>
-                </div>
-
-            </div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <section id="experience" class="py-24 px-6 max-w-7xl mx-auto">
-        <div class="text-center space-y-4 mb-20">
-            <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">Professional <span class="gradient-text">Experience</span></h2>
+  <!-- PROFESSIONAL EXPERIENCE SECTION -->
+  <section id="experience" class="py-20 md:py-32 border-t border-gray-900 bg-gray-950/20">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">Professional Experience</h2>
+        <div class="h-1 w-20 bg-indigo-500 mx-auto mt-4 rounded-full"></div>
+      </div>
+      <div class="relative border-l border-gray-800 ml-4 md:ml-32 space-y-12">
+        
+        <!-- Job 1 -->
+        <div class="relative pl-8 md:pl-12">
+          <div class="absolute -left-3.5 top-1.5 bg-indigo-600 w-7 h-7 rounded-full border-4 border-[#0B0F19] flex items-center justify-center"><i class="fas fa-briefcase text-[10px] text-white"></i></div>
+          <div class="absolute -left-36 top-2 hidden md:block text-right w-28">
+            <span class="text-sm font-semibold text-indigo-400">2024 - 2026</span>
+          </div>
+          <div class="glass-panel p-6 sm:p-8 rounded-xl shadow-xl hover:border-gray-700/50 transition">
+            <span class="text-xs font-semibold text-indigo-400 md:hidden block mb-2">2024 - 2026</span>
+            <!-- MONETIZED LINK TRIGGER 5 (CPA / Job Board Redirect) -->
+            <h3 class="text-xl font-bold text-white"><a href="YOUR_TRACKING_URL" target="_blank" class="hover:underline hover:text-indigo-400 transition">Front Desk Representative (Remote, US-Based)</a></h3>
+            <p class="text-sm font-medium text-gray-400 mb-4">U.S. Operations Support</p>
+            <ul class="space-y-3 text-sm text-gray-400 list-none pl-0">
+              <li class="flex items-start"><i class="fas fa-check text-indigo-500 mt-1 mr-3 text-xs flex-shrink-0"></i> <span>Managed secure backend identity profiling systems, aligning with strict US data privacy policies (PII/SPI handling).</span></li>
+              <li class="flex items-start"><i class="fas fa-check text-indigo-500 mt-1 mr-3 text-xs flex-shrink-0"></i> <span>Audited I-9 verification files and handled onboarding documentation workflows for multi-state personnel pools.</span></li>
+              <li class="flex items-start"><i class="fas fa-check text-indigo-500 mt-1 mr-3 text-xs flex-shrink-0"></i> <span>Ensured 100% compliance with corporate security governance protocols during high-volume customer intakes.</span></li>
+            </ul>
+          </div>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 max-w-6xl mx-auto items-start">
-            
-            <div class="md:col-span-6 space-y-8">
-                
-                <div class="glow-card p-6 rounded-2xl space-y-3">
-                    <div class="flex justify-between items-start flex-wrap gap-2">
-                        <div>
-                            <h4 class="text-lg font-bold text-white">Sky Zone</h4>
-                            <span class="text-slate-400 text-sm">Dubai, UAE</span>
-                        </div>
-                        <span class="inline-block px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-400 text-xs font-semibold tracking-wider border border-indigo-500/20">
-                            05/2025 - 04/2026
-                        </span>
-                    </div>
-                    <h5 class="text-md font-bold text-indigo-400 uppercase tracking-wide">Operations & Front Desk Officer</h5>
-                    <ul class="text-sm text-slate-400 space-y-2 list-disc list-inside marker:text-indigo-400">
-                        <li>Managed high-volume inquiries, front desk bookings, memberships, and POS transactions.</li>
-                        <li>Generated $80K+ revenue through premium membership upsells and targeted promotional campaigns.</li>
-                        <li>Administered precise scheduling structures, records retention tracking, and onboarding synchronization.</li>
-                    </ul>
-                </div>
-
-                <div class="glow-card p-6 rounded-2xl space-y-3">
-                    <div class="flex justify-between items-start flex-wrap gap-2">
-                        <div>
-                            <h4 class="text-lg font-bold text-white">ADP</h4>
-                            <span class="text-slate-400 text-sm">Manila, Philippines</span>
-                        </div>
-                        <span class="inline-block px-3 py-1 rounded-full bg-purple-500/10 text-purple-400 text-xs font-semibold tracking-wider border border-purple-500/20">
-                            09/2022 - 03/2025
-                        </span>
-                    </div>
-                    <h5 class="text-md font-bold text-purple-400 uppercase tracking-wide">Client Services Specialist</h5>
-                    <ul class="text-sm text-slate-400 space-y-2 list-disc list-inside marker:text-purple-400">
-                        <li>Supported global clients including Sodexo, Siemens Energy, and Randstad with comprehensive onboarding.</li>
-                        <li>Managed US Form I-9 and E-Verify workflows achieving complete 100% regulatory compliance.</li>
-                        <li>Reduced out-of-compliance tracking error margins by 90% via structured reporting arrays.</li>
-                    </ul>
-                </div>
-
-                <div class="glow-card p-6 rounded-2xl space-y-3">
-                    <div class="flex justify-between items-start flex-wrap gap-2">
-                        <div>
-                            <h4 class="text-lg font-bold text-white">Ibex</h4>
-                            <span class="text-slate-400 text-sm">Manila, Philippines</span>
-                        </div>
-                        <span class="inline-block px-3 py-1 rounded-full bg-pink-500/10 text-pink-400 text-xs font-semibold tracking-wider border border-pink-500/20">
-                            04/2018 - 08/2022
-                        </span>
-                    </div>
-                    <h5 class="text-md font-bold text-pink-400 uppercase tracking-wide">Customer Service Team Lead</h5>
-                    <ul class="text-sm text-slate-400 space-y-2 list-disc list-inside marker:text-pink-400">
-                        <li>Promoted to direct a team of 15 performance agents supporting AT&T and GoDaddy operations.</li>
-                        <li>Sustained deep service accountability monitoring 85% CSAT targets, 80% FCR, and sub-24h SLAs.</li>
-                        <li>Suppressed customer escalation logs by 80% while establishing systemic QA improvements, managing occupancy over 85%.</li>
-                    </ul>
-                </div>
-
-            </div>
-
-            <div class="md:col-span-6 space-y-8">
-                
-                <div class="glow-card p-6 rounded-2xl space-y-3">
-                    <div class="flex justify-between items-start flex-wrap gap-2">
-                        <div>
-                            <h4 class="text-lg font-bold text-white">ResultsCX</h4>
-                            <span class="text-slate-400 text-sm">Manila, Philippines</span>
-                        </div>
-                        <span class="inline-block px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-semibold tracking-wider border border-emerald-500/20">
-                            11/2016 - 03/2018
-                        </span>
-                    </div>
-                    <h5 class="text-md font-bold text-emerald-400 uppercase tracking-wide">Sales Associate</h5>
-                    <ul class="text-sm text-slate-400 space-y-2 list-disc list-inside marker:text-emerald-400">
-                        <li>Handled inbound and outbound customer engagements for telecom portfolios, securing 90% monthly conversion targets.</li>
-                        <li>Executed precision probing strategies to assess customer ecosystems, delivering targeted upgrades and high-value services.</li>
-                        <li>Generated an average of $10K monthly in upgrades alongside $20K monthly in new line activations and port-in migrations.</li>
-                    </ul>
-                </div>
-
-                <div class="glow-card p-6 rounded-2xl space-y-3">
-                    <div class="flex justify-between items-start flex-wrap gap-2">
-                        <div>
-                            <h4 class="text-lg font-bold text-white">Sutherland</h4>
-                            <span class="text-slate-400 text-sm">Manila, Philippines</span>
-                        </div>
-                        <span class="inline-block px-3 py-1 rounded-full bg-blue-500/10 text-blue-400 text-xs font-semibold tracking-wider border border-blue-500/20">
-                            04/2015 - 10/2016
-                        </span>
-                    </div>
-                    <h5 class="text-md font-bold text-blue-400 uppercase tracking-wide">Customer Service Representative</h5>
-                    <ul class="text-sm text-slate-400 space-y-2 list-disc list-inside marker:text-blue-400">
-                        <li>Spearheaded mitigation of merchant disputes, chargebacks, and payment tracking, reducing disputes by 60% and refund cycles by 45%.</li>
-                        <li>Restructured payment processing workflows to secure absolute compliance with Visa, Mastercard, and AMEX financial rules.</li>
-                        <li>Maintained 100% compliance frameworks across strict KYC, AML, CFT, and deep PII/SPI data privacy protections.</li>
-                    </ul>
-                </div>
-
-            </div>
-
-        </div>
-    </section>
-
-    <section id="education" class="py-24 bg-[#0b0f19] px-6">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
-            
-            <div class="space-y-8">
-                <div class="space-y-2">
-                    <h2 class="text-2xl sm:text-3xl font-bold tracking-tight">Academic <span class="gradient-text">Foundation</span></h2>
-                    <p class="text-slate-400 text-sm">Core university business qualification framework.</p>
-                </div>
-                <div class="glow-card p-6 rounded-2xl border-l-4 border-l-indigo-500 space-y-2">
-                    <span class="text-xs text-indigo-400 font-semibold tracking-wide">Graduated: 06/2010 - 10/2014</span>
-                    <h3 class="text-xl font-bold text-white">BS, Business Administration and Management</h3>
-                    <p class="text-slate-400 text-sm font-medium">Concordia College</p>
-                    <p class="text-xs text-slate-500 pt-2 leading-relaxed">
-                        Acquired structural insight covering corporate workflow engineering, human resource models, operational oversight metrics, and organizational systems governance.
-                    </p>
-                </div>
-            </div>
-
-            <div class="space-y-8">
-                <div class="space-y-2">
-                    <h2 class="text-2xl sm:text-3xl font-bold tracking-tight">Professional <span class="gradient-text">Certifications</span></h2>
-                    <p class="text-slate-400 text-sm">Valid credentials validating industry excellence domains.</p>
-                </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    
-                    <div class="glow-card p-5 rounded-xl flex items-start gap-4">
-                        <div class="text-purple-400 mt-1"><i class="fa-solid fa-award text-lg"></i></div>
-                        <div>
-                            <h4 class="text-white font-semibold text-sm">Six Sigma White Belt</h4>
-                            <p class="text-slate-500 text-xs mt-1">Process Optimization</p>
-                        </div>
-                    </div>
-
-                    <div class="glow-card p-5 rounded-xl flex items-start gap-4">
-                        <div class="text-purple-400 mt-1"><i class="fa-solid fa-square-check text-lg"></i></div>
-                        <div>
-                            <h4 class="text-white font-semibold text-sm">ISO 9001 / 27001 Standards</h4>
-                            <p class="text-slate-500 text-xs mt-1">Quality & Security Systems</p>
-                        </div>
-                    </div>
-
-                    <div class="glow-card p-5 rounded-xl flex items-start gap-4">
-                        <div class="text-purple-400 mt-1"><i class="fa-solid fa-cubes text-lg"></i></div>
-                        <div>
-                            <h4 class="text-white font-semibold text-sm">SAP S/4HANA</h4>
-                            <p class="text-slate-500 text-xs mt-1">Enterprise Resource Planning</p>
-                        </div>
-                    </div>
-
-                    <div class="glow-card p-5 rounded-xl flex items-start gap-4">
-                        <div class="text-purple-400 mt-1"><i class="fa-solid fa-truck-ramp-box text-lg"></i></div>
-                        <div>
-                            <h4 class="text-white font-semibold text-sm">Supply Chain Management</h4>
-                            <p class="text-slate-500 text-xs mt-1">Logistics & Asset Distribution</p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <section id="credentials-gallery" class="py-24 bg-[#070a13] border-t border-slate-900 overflow-hidden">
-        <div class="max-w-7xl mx-auto px-6 mb-12 text-center space-y-4">
-            <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">Verified <span class="gradient-text">Qualifications Gallery</span></h2>
+        <!-- Job 2 -->
+        <div class="relative pl-8 md:pl-12">
+          <div class="absolute -left-3.5 top-1.5 bg-indigo-600 w-7 h-7 rounded-full border-4 border-[#0B0F19] flex items-center justify-center"><i class="fas fa-briefcase text-[10px] text-white"></i></div>
+          <div class="absolute -left-36 top-2 hidden md:block text-right w-28">
+            <span class="text-sm font-semibold text-indigo-400">2021 - 2024</span>
+          </div>
+          <div class="glass-panel p-6 sm:p-8 rounded-xl shadow-xl hover:border-gray-700/50 transition">
+            <span class="text-xs font-semibold text-indigo-400 md:hidden block mb-2">2021 - 2024</span>
+            <!-- MONETIZED LINK TRIGGER 6 (CPA / Job Board Redirect) -->
+            <h3 class="text-xl font-bold text-white"><a href="YOUR_TRACKING_URL" target="_blank" class="hover:underline hover:text-indigo-400 transition">Customer Service Representative & Supervisor</a></h3>
+            <p class="text-sm font-medium text-gray-400 mb-4">Sky Zone (Dubai, UAE)</p>
+            <ul class="space-y-3 text-sm text-gray-400 list-none pl-0">
+              <li class="flex items-start"><i class="fas fa-check text-indigo-500 mt-1 mr-3 text-xs flex-shrink-0"></i> <span>Promoted to Supervisor to oversee day-to-day front-of-house operations, cash control reporting, and customer service workflows.</span></li>
+              <li class="flex items-start"><i class="fas fa-check text-indigo-500 mt-1 mr-3 text-xs flex-shrink-0"></i> <span>Spearheaded queue optimization systems that slashed counter wait times by 25% during peak tourist weekends.</span></li>
+              <li class="flex items-start"><i class="fas fa-check text-indigo-500 mt-1 mr-3 text-xs flex-shrink-0"></i> <span>Conducted compliance checks and safety waiver audits to mitigate operational risks in a high-footfall entertainment facility.</span></li>
+            </ul>
+          </div>
         </div>
 
-        <div class="w-full relative flex items-center">
-            <div class="animate-marquee-container py-4 space-x-6 flex items-center">
-                <div class="w-72 flex-shrink-0 glow-card p-4 rounded-2xl flex flex-col space-y-3">
-                    <img src="Six Sigma White Belt.jpg" alt="Six Sigma White Belt Certification" class="w-full h-44 rounded-xl object-cover border border-slate-800">
-                    <div class="flex items-center justify-between text-[11px] pt-1"><span class="text-indigo-400/90 font-medium">Six Sigma White Belt</span><span class="bg-indigo-500/10 text-indigo-400 px-2 py-0.5 rounded text-[10px] font-semibold uppercase">Quality</span></div>
-                </div>
-                <div class="w-72 flex-shrink-0 glow-card p-4 rounded-2xl flex flex-col space-y-3">
-                    <img src="SAP S  4 HANA.jpg" alt="SAP S/4HANA Certification" class="w-full h-44 rounded-xl object-cover border border-slate-800">
-                    <div class="flex items-center justify-between text-[11px] pt-1"><span class="text-purple-400/90 font-medium">SAP S/4HANA</span><span class="bg-purple-500/10 text-purple-400 px-2 py-0.5 rounded text-[10px] font-semibold uppercase">ERP Systems</span></div>
-                </div>
-                <div class="w-72 flex-shrink-0 glow-card p-4 rounded-2xl flex flex-col space-y-3">
-                    <img src="Supply Chain Management.jpg" alt="Supply Chain Management Certification" class="w-full h-44 rounded-xl object-cover border border-slate-800">
-                    <div class="flex items-center justify-between text-[11px] pt-1"><span class="text-pink-400/90 font-medium">Supply Chain Management</span><span class="bg-pink-500/10 text-pink-400 px-2 py-0.5 rounded text-[10px] font-semibold uppercase">Logistics</span></div>
-                </div>
-                <div class="w-72 flex-shrink-0 glow-card p-4 rounded-2xl flex flex-col space-y-3">
-                    <img src="Operation Management.jpg" alt="Operation Management Certification" class="w-full h-44 rounded-xl object-cover border border-slate-800">
-                    <div class="flex items-center justify-between text-[11px] pt-1"><span class="text-emerald-400/90 font-medium">Operation Management</span><span class="bg-emerald-500/10 text-emerald-400 px-2 py-0.5 rounded text-[10px] font-semibold uppercase">Operations</span></div>
-                </div>
-                <div class="w-72 flex-shrink-0 glow-card p-4 rounded-2xl flex flex-col space-y-3">
-                    <img src="Optimizing Your Work with Microsoft 365.jpg" alt="Optimizing Your Work with Microsoft 365" class="w-full h-44 rounded-xl object-cover border border-slate-800">
-                    <div class="flex items-center justify-between text-[11px] pt-1"><span class="text-blue-400/90 font-medium">Optimizing Work (M365)</span><span class="bg-blue-500/10 text-blue-400 px-2 py-0.5 rounded text-[10px] font-semibold uppercase">Productivity</span></div>
-                </div>
-                <div class="w-72 flex-shrink-0 glow-card p-4 rounded-2xl flex flex-col space-y-3">
-                    <img src="Predictable Success Leadership Styles.jpg" alt="Predictable Success Leadership Styles" class="w-full h-44 rounded-xl object-cover border border-slate-800">
-                    <div class="flex items-center justify-between text-[11px] pt-1"><span class="text-indigo-400/90 font-medium">Leadership Styles</span><span class="bg-indigo-500/10 text-indigo-400 px-2 py-0.5 rounded text-[10px] font-semibold uppercase">Management</span></div>
-                </div>
-                <div class="w-72 flex-shrink-0 glow-card p-4 rounded-2xl flex flex-col space-y-3">
-                    <img src="Procurement Management.jpg" alt="Procurement Management Certification" class="w-full h-44 rounded-xl object-cover border border-slate-800">
-                    <div class="flex items-center justify-between text-[11px] pt-1"><span class="text-purple-400/90 font-medium">Procurement Management</span><span class="bg-purple-500/10 text-purple-400 px-2 py-0.5 rounded text-[10px] font-semibold uppercase">Sourcing</span></div>
-                </div>
-                <div class="w-72 flex-shrink-0 glow-card p-4 rounded-2xl flex flex-col space-y-3">
-                    <img src="Retail Management.jpg" alt="Retail Management Certification" class="w-full h-44 rounded-xl object-cover border border-slate-800">
-                    <div class="flex items-center justify-between text-[11px] pt-1"><span class="text-pink-400/90 font-medium">Retail Management</span><span class="bg-pink-500/10 text-pink-400 px-2 py-0.5 rounded text-[10px] font-semibold uppercase">Retail Operations</span></div>
-                </div>
-                <div class="w-72 flex-shrink-0 glow-card p-4 rounded-2xl flex flex-col space-y-3">
-                    <img src="Time Management Fundamentals.jpg" alt="Time Management Fundamentals Certification" class="w-full h-44 rounded-xl object-cover border border-slate-800">
-                    <div class="flex items-center justify-between text-[11px] pt-1"><span class="text-emerald-400/90 font-medium">Time Management</span><span class="bg-emerald-500/10 text-emerald-400 px-2 py-0.5 rounded text-[10px] font-semibold uppercase">Core Effectiveness</span></div>
-                </div>
-                <div class="w-72 flex-shrink-0 glow-card p-4 rounded-2xl flex flex-col space-y-3">
-                    <img src="Administrative Professional Foundations.jpg" alt="Administrative Professional Foundations" class="w-full h-44 rounded-xl object-cover border border-slate-800">
-                    <div class="flex items-center justify-between text-[11px] pt-1"><span class="text-blue-400/90 font-medium">Administrative Professional</span><span class="bg-blue-500/10 text-blue-400 px-2 py-0.5 rounded text-[10px] font-semibold uppercase">Admin</span></div>
-                </div>
-
-                <div class="w-72 flex-shrink-0 glow-card p-4 rounded-2xl flex flex-col space-y-3">
-                    <img src="Six Sigma White Belt.jpg" alt="Six Sigma White Belt Certification" class="w-full h-44 rounded-xl object-cover border border-slate-800">
-                    <div class="flex items-center justify-between text-[11px] pt-1"><span class="text-indigo-400/90 font-medium">Six Sigma White Belt</span><span class="bg-indigo-500/10 text-indigo-400 px-2 py-0.5 rounded text-[10px] font-semibold uppercase">Quality</span></div>
-                </div>
-                <div class="w-72 flex-shrink-0 glow-card p-4 rounded-2xl flex flex-col space-y-3">
-                    <img src="SAP S  4 HANA.jpg" alt="SAP S/4HANA Certification" class="w-full h-44 rounded-xl object-cover border border-slate-800">
-                    <div class="flex items-center justify-between text-[11px] pt-1"><span class="text-purple-400/90 font-medium">SAP S/4HANA</span><span class="bg-purple-500/10 text-purple-400 px-2 py-0.5 rounded text-[10px] font-semibold uppercase">ERP Systems</span></div>
-                </div>
-                <div class="w-72 flex-shrink-0 glow-card p-4 rounded-2xl flex flex-col space-y-3">
-                    <img src="Supply Chain Management.jpg" alt="Supply Chain Management Certification" class="w-full h-44 rounded-xl object-cover border border-slate-800">
-                    <div class="flex items-center justify-between text-[11px] pt-1"><span class="text-pink-400/90 font-medium">Supply Chain Management</span><span class="bg-pink-500/10 text-pink-400 px-2 py-0.5 rounded text-[10px] font-semibold uppercase">Logistics</span></div>
-                </div>
-                <div class="w-72 flex-shrink-0 glow-card p-4 rounded-2xl flex flex-col space-y-3">
-                    <img src="Operation Management.jpg" alt="Operation Management Certification" class="w-full h-44 rounded-xl object-cover border border-slate-800">
-                    <div class="flex items-center justify-between text-[11px] pt-1"><span class="text-emerald-400/90 font-medium">Operation Management</span><span class="bg-emerald-500/10 text-emerald-400 px-2 py-0.5 rounded text-[10px] font-semibold uppercase">Operations</span></div>
-                </div>
-                <div class="w-72 flex-shrink-0 glow-card p-4 rounded-2xl flex flex-col space-y-3">
-                    <img src="Optimizing Your Work with Microsoft 365.jpg" alt="Optimizing Your Work with Microsoft 365" class="w-full h-44 rounded-xl object-cover border border-slate-800">
-                    <div class="flex items-center justify-between text-[11px] pt-1"><span class="text-blue-400/90 font-medium">Optimizing Work (M365)</span><span class="bg-blue-500/10 text-blue-400 px-2 py-0.5 rounded text-[10px] font-semibold uppercase">Productivity</span></div>
-                </div>
-                <div class="w-72 flex-shrink-0 glow-card p-4 rounded-2xl flex flex-col space-y-3">
-                    <img src="Predictable Success Leadership Styles.jpg" alt="Predictable Success Leadership Styles" class="w-full h-44 rounded-xl object-cover border border-slate-800">
-                    <div class="flex items-center justify-between text-[11px] pt-1"><span class="text-indigo-400/90 font-medium">Leadership Styles</span><span class="bg-indigo-500/10 text-indigo-400 px-2 py-0.5 rounded text-[10px] font-semibold uppercase">Management</span></div>
-                </div>
-                <div class="w-72 flex-shrink-0 glow-card p-4 rounded-2xl flex flex-col space-y-3">
-                    <img src="Procurement Management.jpg" alt="Procurement Management Certification" class="w-full h-44 rounded-xl object-cover border border-slate-800">
-                    <div class="flex items-center justify-between text-[11px] pt-1"><span class="text-purple-400/90 font-medium">Procurement Management</span><span class="bg-purple-500/10 text-purple-400 px-2 py-0.5 rounded text-[10px] font-semibold uppercase">Sourcing</span></div>
-                </div>
-                <div class="w-72 flex-shrink-0 glow-card p-4 rounded-2xl flex flex-col space-y-3">
-                    <img src="Retail Management.jpg" alt="Retail Management Certification" class="w-full h-44 rounded-xl object-cover border border-slate-800">
-                    <div class="flex items-center justify-between text-[11px] pt-1"><span class="text-pink-400/90 font-medium">Retail Management</span><span class="bg-pink-500/10 text-pink-400 px-2 py-0.5 rounded text-[10px] font-semibold uppercase">Retail Operations</span></div>
-                </div>
-                <div class="w-72 flex-shrink-0 glow-card p-4 rounded-2xl flex flex-col space-y-3">
-                    <img src="Time Management Fundamentals.jpg" alt="Time Management Fundamentals Certification" class="w-full h-44 rounded-xl object-cover border border-slate-800">
-                    <div class="flex items-center justify-between text-[11px] pt-1"><span class="text-emerald-400/90 font-medium">Time Management</span><span class="bg-emerald-500/10 text-emerald-400 px-2 py-0.5 rounded text-[10px] font-semibold uppercase">Core Effectiveness</span></div>
-                </div>
-                <div class="w-72 flex-shrink-0 glow-card p-4 rounded-2xl flex flex-col space-y-3">
-                    <img src="Administrative Professional Foundations.jpg" alt="Administrative Professional Foundations" class="w-full h-44 rounded-xl object-cover border border-slate-800">
-                    <div class="flex items-center justify-between text-[11px] pt-1"><span class="text-blue-400/90 font-medium">Administrative Professional</span><span class="bg-blue-500/10 text-blue-400 px-2 py-0.5 rounded text-[10px] font-semibold uppercase">Admin</span></div>
-                </div>
-            </div>
+        <!-- Job 3 -->
+        <div class="relative pl-8 md:pl-12">
+          <div class="absolute -left-3.5 top-1.5 bg-indigo-600 w-7 h-7 rounded-full border-4 border-[#0B0F19] flex items-center justify-center"><i class="fas fa-briefcase text-[10px] text-white"></i></div>
+          <div class="absolute -left-36 top-2 hidden md:block text-right w-28">
+            <span class="text-sm font-semibold text-indigo-400">2018 - 2021</span>
+          </div>
+          <div class="glass-panel p-6 sm:p-8 rounded-xl shadow-xl hover:border-gray-700/50 transition">
+            <span class="text-xs font-semibold text-indigo-400 md:hidden block mb-2">2018 - 2021</span>
+            <!-- MONETIZED LINK TRIGGER 7 (CPA / Job Board Redirect) -->
+            <h3 class="text-xl font-bold text-white"><a href="YOUR_TRACKING_URL" target="_blank" class="hover:underline hover:text-indigo-400 transition">Customer Service Specialist</a></h3>
+            <p class="text-sm font-medium text-gray-400 mb-4">ADP / Ibex Global</p>
+            <ul class="space-y-3 text-sm text-gray-400 list-none pl-0">
+              <li class="flex items-start"><i class="fas fa-check text-indigo-500 mt-1 mr-3 text-xs flex-shrink-0"></i> <span>Maintained an average 96% Customer Satisfaction (CSAT) rating handling payroll and data verification inquiries.</span></li>
+              <li class="flex items-start"><i class="fas fa-check text-indigo-500 mt-1 mr-3 text-xs flex-shrink-0"></i> <span>Utilized multi-screen CRM configurations to accurately verify corporate accounts and client profiles.</span></li>
+            </ul>
+          </div>
         </div>
-    </section>
 
-    <section id="contact" class="py-24 bg-[#0b0f19] px-6 border-t border-slate-900">
-        <div class="max-w-5xl mx-auto space-y-12">
-            <div class="text-center space-y-4">
-                <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">Get In <span class="gradient-text">Touch</span></h2>
-                <p class="text-slate-400 max-w-xl mx-auto">Feel free to reach out through any of the channels below. I'll get back to you as soon as possible!</p>
-            </div>
+      </div>
+    </div>
+  </section>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
-                <a href="mailto:jerwinlumpay@outlook.com" class="glow-card p-6 rounded-2xl flex items-center space-x-4 hover:border-indigo-500/50 group">
-                    <div class="w-12 h-12 rounded-xl bg-indigo-500/10 flex items-center justify-center text-indigo-400 text-xl group-hover:bg-indigo-500 group-hover:text-white transition-all duration-300">
-                        <i class="fa-solid fa-envelope"></i>
-                    </div>
-                    <div>
-                        <h4 class="text-xs text-slate-500 font-semibold uppercase">Primary Email</h4>
-                        <p class="text-sm font-medium text-slate-200 mt-0.5 break-all">jerwinlumpay@outlook.com</p>
-                    </div>
-                </a>
-
-                <a href="mailto:support@jerwinlumpay.com" class="glow-card p-6 rounded-2xl flex items-center space-x-4 hover:border-purple-500/50 group">
-                    <div class="w-12 h-12 rounded-xl bg-purple-500/10 flex items-center justify-center text-purple-400 text-xl group-hover:bg-purple-500 group-hover:text-white transition-all duration-300">
-                        <i class="fa-solid fa-headset"></i>
-                    </div>
-                    <div>
-                        <h4 class="text-xs text-slate-500 font-semibold uppercase">Support Email</h4>
-                        <p class="text-sm font-medium text-slate-200 mt-0.5 break-all">support@jerwinlumpay.com</p>
-                    </div>
-                </a>
-
-                <a href="https://www.linkedin.com/in/jerwin-lumpay" target="_blank" rel="noopener" class="glow-card p-6 rounded-2xl flex items-center space-x-4 hover:border-blue-500/50 group">
-                    <div class="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-400 text-xl group-hover:bg-blue-500 group-hover:text-white transition-all duration-300">
-                        <i class="fa-brands fa-linkedin-in"></i>
-                    </div>
-                    <div>
-                        <h4 class="text-xs text-slate-500 font-semibold uppercase">LinkedIn Profile</h4>
-                        <p class="text-sm font-medium text-slate-200 mt-0.5">linkedin.com/in/jerwin-lumpay</p>
-                    </div>
-                </a>
-
-                <a href="https://wa.me/971544609927" target="_blank" rel="noopener" class="glow-card p-6 rounded-2xl flex items-center space-x-4 hover:border-emerald-500/50 group">
-                    <div class="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-400 text-xl group-hover:bg-emerald-500 group-hover:text-white transition-all duration-300">
-                        <i class="fa-brands fa-whatsapp"></i>
-                    </div>
-                    <div>
-                        <h4 class="text-xs text-slate-500 font-semibold uppercase">WhatsApp Chat</h4>
-                        <p class="text-sm font-medium text-slate-200 mt-0.5">+971-54-460-9927</p>
-                    </div>
-                </a>
-            </div>
+  <!-- RECOGNITIONS & CERTIFICATIONS SECTION -->
+  <section id="certifications" class="py-20 md:py-32 border-t border-gray-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">Professional Credentials</h2>
+        <p class="text-gray-400 mt-2 text-sm sm:text-base">Verified alignments across international security, processing, and management methodologies.</p>
+        <div class="h-1 w-20 bg-indigo-500 mx-auto mt-4 rounded-full"></div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Cert 1 -->
+        <div class="glass-panel p-6 rounded-xl border border-gray-800 hover:border-indigo-500/30 transition flex items-start space-x-4">
+          <div class="bg-indigo-950/60 p-3 rounded-lg border border-indigo-500/20 text-indigo-400"><i class="fas fa-shield-halved text-xl"></i></div>
+          <div>
+            <h4 class="text-white font-semibold text-base">ISO 27001 Foundation Aligned</h4>
+            <p class="text-xs text-gray-500 mt-0.5">Information Security Management</p>
+          </div>
         </div>
-    </section>
 
-    <footer class="py-8 text-center text-xs text-slate-600 border-t border-slate-900 bg-[#0f172a]">
-        <p>&copy; 2026 Jerwin Lumpay. All Rights Reserved.</p>
-    </footer>
+        <!-- Cert 2 -->
+        <div class="glass-panel p-6 rounded-xl border border-gray-800 hover:border-indigo-500/30 transition flex items-start space-x-4">
+          <div class="bg-indigo-950/60 p-3 rounded-lg border border-indigo-500/20 text-indigo-400"><i class="fas fa-cubes text-xl"></i></div>
+          <div>
+            <h4 class="text-white font-semibold text-base">SAP S/4HANA Processing</h4>
+            <p class="text-xs text-gray-500 mt-0.5">Enterprise Resource Logistics</p>
+          </div>
+        </div>
 
-    <script>
-        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const menuIcon = document.getElementById('menu-icon');
+        <!-- Cert 3 -->
+        <div class="glass-panel p-6 rounded-xl border border-gray-800 hover:border-indigo-500/30 transition flex items-start space-x-4">
+          <div class="bg-indigo-950/60 p-3 rounded-lg border border-indigo-500/20 text-indigo-400"><i class="fas fa-cart-flatbed text-xl"></i></div>
+          <div>
+            <h4 class="text-white font-semibold text-base">Procurement Management</h4>
+            <p class="text-xs text-gray-500 mt-0.5">Supply Chain & Vendor Operations</p>
+          </div>
+        </div>
 
-        function toggleMenu() {
-            const isOpen = mobileMenu.classList.contains('mobile-menu-open');
-            if (isOpen) {
-                mobileMenu.classList.remove('mobile-menu-open');
-                mobileMenu.classList.add('translate-x-full');
-                menuIcon.classList.remove('fa-xmark');
-                menuIcon.classList.add('fa-bars');
-            } else {
-                mobileMenu.classList.add('mobile-menu-open');
-                mobileMenu.classList.remove('translate-x-full');
-                menuIcon.classList.remove('fa-bars');
-                menuIcon.classList.add('fa-xmark');
-            }
-        }
+        <!-- Cert 4 -->
+        <div class="glass-panel p-6 rounded-xl border border-gray-800 hover:border-indigo-500/30 transition flex items-start space-x-4">
+          <div class="bg-indigo-950/60 p-3 rounded-lg border border-indigo-500/20 text-indigo-400"><i class="fas fa-gauge-high text-xl"></i></div>
+          <div>
+            <h4 class="text-white font-semibold text-base">Six Sigma White Belt</h4>
+            <p class="text-xs text-gray-500 mt-0.5">Process Optimization (GLSS)</p>
+          </div>
+        </div>
 
-        mobileMenuToggle.addEventListener('click', toggleMenu);
-    </script>
+        <!-- Cert 5 -->
+        <div class="glass-panel p-6 rounded-xl border border-gray-800 hover:border-indigo-500/30 transition flex items-start space-x-4">
+          <div class="bg-indigo-950/60 p-3 rounded-lg border border-indigo-500/20 text-indigo-400"><i class="fas fa-users-gear text-xl"></i></div>
+          <div>
+            <h4 class="text-white font-semibold text-base">Customer Management Specialist</h4>
+            <p class="text-xs text-gray-500 mt-0.5">Service Delivery Standards</p>
+          </div>
+        </div>
+
+        <!-- Cert 6 -->
+        <div class="glass-panel p-6 rounded-xl border border-gray-800 hover:border-indigo-500/30 transition flex items-start space-x-4">
+          <div class="bg-indigo-950/60 p-3 rounded-lg border border-indigo-500/20 text-indigo-400"><i class="fas fa-shop text-xl"></i></div>
+          <div>
+            <h4 class="text-white font-semibold text-base">Retail Management & Ops</h4>
+            <p class="text-xs text-gray-500 mt-0.5">Facility Operations Mastery</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TARGETED CORE SKILLS SECTION -->
+  <section id="skills" class="py-20 md:py-32 border-t border-gray-900 bg-gray-950/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">Core Competencies</h2>
+        <div class="h-1 w-20 bg-indigo-500 mx-auto mt-4 rounded-full"></div>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="glass-panel p-4 text-center rounded-lg border border-gray-800"><span class="text-sm font-semibold text-white">Control Center Ops</span></div>
+        <div class="glass-panel p-4 text-center rounded-lg border border-gray-800"><span class="text-sm font-semibold text-white">KYC & I-9 Verification</span></div>
+        <div class="glass-panel p-4 text-center rounded-lg border border-gray-800"><span class="text-sm font-semibold text-white">Data Privacy & Security</span></div>
+        <div class="glass-panel p-4 text-center rounded-lg border border-gray-800"><span class="text-sm font-semibold text-white">Risk Optimization</span></div>
+        <div class="glass-panel p-4 text-center rounded-lg border border-gray-800"><span class="text-sm font-semibold text-white">CRM Configurations</span></div>
+        <div class="glass-panel p-4 text-center rounded-lg border border-gray-800"><span class="text-sm font-semibold text-white">Procurement Systems</span></div>
+        <div class="glass-panel p-4 text-center rounded-lg border border-gray-800"><span class="text-sm font-semibold text-white">Corporate Reporting</span></div>
+        <div class="glass-panel p-4 text-center rounded-lg border border-gray-800"><span class="text-sm font-semibold text-white">Escalation Resolution</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPLIANCE FOOTER SECTION -->
+  <footer class="bg-[#070A10] border-t border-gray-900 py-12 text-center text-xs text-gray-500">
+    <div class="max-w-7xl mx-auto px-4 space-y-3">
+      <p class="text-gray-400 font-medium">© 2026 Jerwin Lumpay. All rights reserved.</p>
+      <p class="max-w-md mx-auto leading-relaxed">Vetted Framework Interface. Certified compliance metrics mapping structure aligned across active localized service standards.</p>
+    </div>
+  </footer>
+
+  <!-- FUNCTIONAL MOBILE TOGGLE CONTROLLER -->
+  <script>
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
+
 </body>
 </html>
